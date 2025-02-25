@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_NCD02.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_NCD05.html</loc>
     
     <lastmod>2025-02-21</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_NCD05.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_NCD02.html</loc>
     
     <lastmod>2025-02-21</lastmod>
     
@@ -128,6 +128,15 @@
   </url>
   
   <url>
+    <loc>https://www.cclmsy.cc/posts/Computer_Networks_and_Communications(Lab).html</loc>
+    
+    <lastmod>2025-02-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://www.cclmsy.cc/posts/Note_Image_Processing.html</loc>
     
     <lastmod>2025-02-05</lastmod>
@@ -138,15 +147,6 @@
   
   <url>
     <loc>https://www.cclmsy.cc/posts/Note_Principle_of_Computer.html</loc>
-    
-    <lastmod>2025-02-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.cclmsy.cc/posts/Computer_Networks_and_Communications(Lab).html</loc>
     
     <lastmod>2025-02-05</lastmod>
     
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU07.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU08.html</loc>
     
     <lastmod>2024-08-25</lastmod>
     
@@ -200,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU08.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU07.html</loc>
     
     <lastmod>2024-08-25</lastmod>
     
@@ -335,15 +335,6 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_NCD01.html</loc>
-    
-    <lastmod>2024-07-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_NCD03.html</loc>
     
     <lastmod>2024-07-30</lastmod>
@@ -362,7 +353,7 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU01.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_NCD01.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -372,6 +363,15 @@
   
   <url>
     <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU04.html</loc>
+    
+    <lastmod>2024-07-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU01.html</loc>
     
     <lastmod>2024-07-30</lastmod>
     
@@ -416,7 +416,7 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/box/gallery/backgrounds/p2.html</loc>
+    <loc>https://www.cclmsy.cc/box/gallery/covers/index.html</loc>
     
     <lastmod>2024-06-23</lastmod>
     
@@ -443,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/box/gallery/covers/index.html</loc>
+    <loc>https://www.cclmsy.cc/box/gallery/backgrounds/p2.html</loc>
     
     <lastmod>2024-06-23</lastmod>
     
@@ -461,7 +461,7 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU01.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU03.html</loc>
     
     <lastmod>2023-11-08</lastmod>
     
@@ -479,25 +479,7 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU03.html</loc>
-    
-    <lastmod>2023-11-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU04.html</loc>
-    
-    <lastmod>2023-11-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU05.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU01.html</loc>
     
     <lastmod>2023-11-08</lastmod>
     
@@ -515,7 +497,25 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU07.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU04.html</loc>
+    
+    <lastmod>2023-11-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU09.html</loc>
+    
+    <lastmod>2023-11-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU05.html</loc>
     
     <lastmod>2023-11-08</lastmod>
     
@@ -533,7 +533,7 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU09.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU07.html</loc>
     
     <lastmod>2023-11-08</lastmod>
     
@@ -578,15 +578,6 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD06.html</loc>
-    
-    <lastmod>2023-11-08</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD07.html</loc>
     
     <lastmod>2023-11-08</lastmod>
@@ -605,7 +596,16 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD05.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD06.html</loc>
+    
+    <lastmod>2023-11-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD09.html</loc>
     
     <lastmod>2023-11-08</lastmod>
     
@@ -623,7 +623,7 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD09.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD05.html</loc>
     
     <lastmod>2023-11-08</lastmod>
     
@@ -659,7 +659,7 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/social/bb/index.html</loc>
+    <loc>https://www.cclmsy.cc/life/games/index.html</loc>
     
     <lastmod>2023-11-05</lastmod>
     
@@ -669,15 +669,6 @@
   
   <url>
     <loc>https://www.cclmsy.cc/life/movies/index.html</loc>
-    
-    <lastmod>2023-11-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.cclmsy.cc/social/link/index.html</loc>
     
     <lastmod>2023-11-05</lastmod>
     
@@ -704,7 +695,16 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/life/games/index.html</loc>
+    <loc>https://www.cclmsy.cc/social/bb/index.html</loc>
+    
+    <lastmod>2023-11-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cclmsy.cc/social/link/index.html</loc>
     
     <lastmod>2023-11-05</lastmod>
     
@@ -765,6 +765,13 @@
   </url>
   
   <url>
+    <loc>https://www.cclmsy.cc/tags/%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2025-02-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://www.cclmsy.cc/tags/%E6%9C%BA%E5%99%A8%E4%BA%BA/</loc>
     <lastmod>2025-02-25</lastmod>
     <changefreq>weekly</changefreq>
@@ -773,13 +780,6 @@
   
   <url>
     <loc>https://www.cclmsy.cc/tags/%E9%A1%B9%E7%9B%AE/</loc>
-    <lastmod>2025-02-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.cclmsy.cc/tags/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -842,21 +842,7 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/tags/2023%E6%9A%91%E6%9C%9F%E6%9D%AD%E7%94%B5%E5%A4%9A%E6%A0%A1/</loc>
-    <lastmod>2025-02-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://www.cclmsy.cc/tags/2024%E6%9A%91%E6%9C%9F%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A1/</loc>
-    <lastmod>2025-02-25</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.cclmsy.cc/tags/2023%E6%9A%91%E6%9C%9F%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A1/</loc>
     <lastmod>2025-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -869,10 +855,24 @@
     <priority>0.2</priority>
   </url>
   
+  <url>
+    <loc>https://www.cclmsy.cc/tags/2023%E6%9A%91%E6%9C%9F%E6%9D%AD%E7%94%B5%E5%A4%9A%E6%A0%A1/</loc>
+    <lastmod>2025-02-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.cclmsy.cc/tags/2023%E6%9A%91%E6%9C%9F%E7%89%9B%E5%AE%A2%E5%A4%9A%E6%A0%A1/</loc>
+    <lastmod>2025-02-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://www.cclmsy.cc/categories/%E5%85%B6%E4%BB%96/</loc>
+    <loc>https://www.cclmsy.cc/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2025-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -886,7 +886,7 @@
   </url>
   
   <url>
-    <loc>https://www.cclmsy.cc/categories/%E6%95%99%E7%A8%8B/</loc>
+    <loc>https://www.cclmsy.cc/categories/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2025-02-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
