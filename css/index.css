@@ -206,6 +206,7 @@ template {
 }
 .fontawesomeIcon,
 hr:before,
+#article-container a.headerlink:after,
 #article-container h1:before,
 #article-container h2:before,
 #article-container h3:before,
@@ -4254,6 +4255,33 @@ h1.page-title + .tag-cloud-list {
 #article-container iframe {
   margin: 0 0 20px;
 }
+#article-container a.headerlink:after {
+  float: right;
+  color: var(--headline-presudo);
+  content: '\f0c1';
+  font-size: 0.95em;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#article-container a.headerlink:hover:after {
+  color: var(--pseudo-hover);
+}
+#article-container h1:hover a.headerlink:after,
+#article-container h2:hover a.headerlink:after,
+#article-container h3:hover a.headerlink:after,
+#article-container h4:hover a.headerlink:after,
+#article-container h5:hover a.headerlink:after,
+#article-container h6:hover a.headerlink:after {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
 #article-container ol ol,
 #article-container ul ol,
 #article-container ol ul,
@@ -7555,13 +7583,13 @@ button#go-up:hover #percent {
 
 /* 个人信息卡片背景图 */
 [data-theme="light"] #aside-content > .card-widget.card-info {
-  /* background-image: url(https://tuchuang.voooe.cn/images/2023/02/28/springBg.png); */
+  /* background-image: url(https://tuchuang.voooe.cn/Posts/2023/02/28/springBg.png); */
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;
 }
 [data-theme="dark"] #aside-content > .card-widget.card-info {
-  /* background-image: url(https://tuchuang.voooe.cn/images/2023/02/28/aurora.webp); */
+  /* background-image: url(https://tuchuang.voooe.cn/Posts/2023/02/28/aurora.webp); */
   background-repeat: no-repeat;
   background-attachment: inherit;
   background-size: 100%;
@@ -9062,7 +9090,7 @@ figure.highlight pre .deletion {
   padding: 1rem;
   position: relative;
   border-radius: 12px;
-  background-image: url(https://tuchuang.voooe.cn/images/2023/01/02/tunian.webp);
+  background-image: url(https://tuchuang.voooe.cn/Posts/2023/01/02/tunian.webp);
   background-size: cover;
   background-position: center;
 }
@@ -9123,7 +9151,7 @@ figure.highlight pre .deletion {
 
 /* 信息卡片彩带 */
 /* .author_top:hover {
-  background: url(https://tuchuang.voooe.cn/images/2023/01/02/snow.gif);
+  background: url(https://tuchuang.voooe.cn/Posts/2023/01/02/snow.gif);
   background-size: cover;
 } */
 
