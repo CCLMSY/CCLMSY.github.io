@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.cclmsy.cc/posts/sparse_table.html</loc>
-    <lastmod>2025-03-10</lastmod>
+    <loc>https://www.cclmsy.cc/posts/deep_learning_1.html</loc>
+    <lastmod>2025-03-13</lastmod>
   </url>
   <url>
     <loc>https://www.cclmsy.cc/posts/ChatIR.html</loc>
-    <lastmod>2025-03-10</lastmod>
+    <lastmod>2025-03-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cclmsy.cc/posts/dsu.html</loc>
+    <lastmod>2025-03-11</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cclmsy.cc/posts/sparse_table.html</loc>
+    <lastmod>2025-03-11</lastmod>
   </url>
   <url>
     <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU02.html</loc>
@@ -49,6 +57,10 @@
     <lastmod>2025-03-09</lastmod>
   </url>
   <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU05.html</loc>
+    <lastmod>2025-03-09</lastmod>
+  </url>
+  <url>
     <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU04.html</loc>
     <lastmod>2025-03-09</lastmod>
   </url>
@@ -57,7 +69,7 @@
     <lastmod>2025-03-09</lastmod>
   </url>
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU05.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU10.html</loc>
     <lastmod>2025-03-09</lastmod>
   </url>
   <url>
@@ -69,19 +81,11 @@
     <lastmod>2025-03-09</lastmod>
   </url>
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU10.html</loc>
-    <lastmod>2025-03-09</lastmod>
-  </url>
-  <url>
     <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU01.html</loc>
     <lastmod>2025-03-09</lastmod>
   </url>
   <url>
     <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU03.html</loc>
-    <lastmod>2025-03-09</lastmod>
-  </url>
-  <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU09.html</loc>
     <lastmod>2025-03-09</lastmod>
   </url>
   <url>
@@ -93,6 +97,10 @@
     <lastmod>2025-03-09</lastmod>
   </url>
   <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_HDU09.html</loc>
+    <lastmod>2025-03-09</lastmod>
+  </url>
+  <url>
     <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_NCD10.html</loc>
     <lastmod>2025-03-09</lastmod>
   </url>
@@ -101,11 +109,11 @@
     <lastmod>2025-03-09</lastmod>
   </url>
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_NCD09.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_NCD08.html</loc>
     <lastmod>2025-03-09</lastmod>
   </url>
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_NCD08.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2024Summer_NCD09.html</loc>
     <lastmod>2025-03-09</lastmod>
   </url>
   <url>
@@ -135,10 +143,6 @@
   <url>
     <loc>https://www.cclmsy.cc/posts/deep_learning02.html</loc>
     <lastmod>2025-02-20</lastmod>
-  </url>
-  <url>
-    <loc>https://www.cclmsy.cc/posts/deep_learning01.html</loc>
-    <lastmod>2025-02-19</lastmod>
   </url>
   <url>
     <loc>https://www.cclmsy.cc/posts/computer_networks_and_communications.html</loc>
@@ -173,38 +177,6 @@
     <lastmod>2024-01-11</lastmod>
   </url>
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU03.html</loc>
-    <lastmod>2023-11-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU04.html</loc>
-    <lastmod>2023-11-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU06.html</loc>
-    <lastmod>2023-11-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU05.html</loc>
-    <lastmod>2023-11-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU02.html</loc>
-    <lastmod>2023-11-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU01.html</loc>
-    <lastmod>2023-11-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU08.html</loc>
-    <lastmod>2023-11-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU07.html</loc>
-    <lastmod>2023-11-08</lastmod>
-  </url>
-  <url>
     <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD01.html</loc>
     <lastmod>2023-11-08</lastmod>
   </url>
@@ -217,15 +189,7 @@
     <lastmod>2023-11-08</lastmod>
   </url>
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU09.html</loc>
-    <lastmod>2023-11-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD05.html</loc>
-    <lastmod>2023-11-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU10.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD08.html</loc>
     <lastmod>2023-11-08</lastmod>
   </url>
   <url>
@@ -233,11 +197,7 @@
     <lastmod>2023-11-08</lastmod>
   </url>
   <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD07.html</loc>
-    <lastmod>2023-11-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD08.html</loc>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD05.html</loc>
     <lastmod>2023-11-08</lastmod>
   </url>
   <url>
@@ -245,15 +205,59 @@
     <lastmod>2023-11-08</lastmod>
   </url>
   <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD07.html</loc>
+    <lastmod>2023-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU01.html</loc>
+    <lastmod>2023-11-08</lastmod>
+  </url>
+  <url>
     <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_NCD10.html</loc>
     <lastmod>2023-11-08</lastmod>
   </url>
   <url>
-    <loc>https://www.cclmsy.cc/posts/dp_others.html</loc>
-    <lastmod>2023-10-21</lastmod>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU03.html</loc>
+    <lastmod>2023-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU04.html</loc>
+    <lastmod>2023-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU05.html</loc>
+    <lastmod>2023-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU02.html</loc>
+    <lastmod>2023-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU10.html</loc>
+    <lastmod>2023-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU06.html</loc>
+    <lastmod>2023-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU07.html</loc>
+    <lastmod>2023-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU08.html</loc>
+    <lastmod>2023-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cclmsy.cc/posts/ACM_2023Summer_HDU09.html</loc>
+    <lastmod>2023-11-08</lastmod>
   </url>
   <url>
     <loc>https://www.cclmsy.cc/posts/dp_bag.html</loc>
+    <lastmod>2023-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://www.cclmsy.cc/posts/dp_others.html</loc>
     <lastmod>2023-10-21</lastmod>
   </url>
   <url>
