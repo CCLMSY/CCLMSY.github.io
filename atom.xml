@@ -196,8 +196,8 @@
   
   <entry>
     <title>深度学习笔记3-卷积神经网络CNN</title>
-    <link href="https://www.cclmsy.cc/posts/deep_learning03.html"/>
-    <id>https://www.cclmsy.cc/posts/deep_learning03.html</id>
+    <link href="https://www.cclmsy.cc/posts/deep_learning_3.html"/>
+    <id>https://www.cclmsy.cc/posts/deep_learning_3.html</id>
     <published>2025-02-21T16:00:00.000Z</published>
     <updated>2025-02-21T16:00:00.000Z</updated>
     
@@ -217,8 +217,8 @@
   
   <entry>
     <title>DL笔记|改善深层神经网络</title>
-    <link href="https://www.cclmsy.cc/posts/deep_learning_1.html"/>
-    <id>https://www.cclmsy.cc/posts/deep_learning_1.html</id>
+    <link href="https://www.cclmsy.cc/posts/deep_learning_2.html"/>
+    <id>https://www.cclmsy.cc/posts/deep_learning_2.html</id>
     <published>2025-02-20T16:00:00.000Z</published>
     <updated>2025-03-14T16:00:00.000Z</updated>
     
@@ -276,9 +276,9 @@
     <category term="算法模板" scheme="https://www.cclmsy.cc/categories/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
     
     
-    <category term="数据结构" scheme="https://www.cclmsy.cc/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
     <category term="算法模板" scheme="https://www.cclmsy.cc/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
+    
+    <category term="数据结构" scheme="https://www.cclmsy.cc/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
