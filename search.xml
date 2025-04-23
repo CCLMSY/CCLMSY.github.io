@@ -20,9 +20,9 @@
       
         <tags>
             
-            <tag> 论文实现 </tag>
-            
             <tag> 深度学习 </tag>
+            
+            <tag> 论文实现 </tag>
             
         </tags>
       
@@ -126,9 +126,9 @@
       
         <tags>
             
-            <tag> 论文实现 </tag>
-            
             <tag> 深度学习 </tag>
+            
+            <tag> 论文实现 </tag>
             
         </tags>
       
@@ -307,9 +307,9 @@
       
         <tags>
             
-            <tag> 深度学习 </tag>
-            
             <tag> 神经网络 </tag>
+            
+            <tag> 深度学习 </tag>
             
         </tags>
       
@@ -387,6 +387,60 @@
         <tags>
             
             <tag> 课程笔记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>二部图最大匹配</title>
+      <link href="/posts/bigraph_match.html"/>
+      <url>/posts/bigraph_match.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="二部图最大匹配">二部图最大匹配</h2><p>给定一个二分图G，即分左右两部分，各部分之间的点没有边连接</p><p>要求选出一些边，使得这些边没有公共顶点，且边的数量最大</p><p>O(nm) 增广路径算法</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">augment_path</span></span><br><span class="line">&#123;</span><br><span class="line">vector&lt;vector&lt;ll&gt;&gt; g;</span><br><span class="line">vector&lt;ll&gt; pa; <span class="comment">// 匹配</span></span><br><span class="line">vector&lt;ll&gt; pb;</span><br><span class="line">vector&lt;ll&gt; vis; <span class="comment">// 访问</span></span><br><span class="line">ll n, m;<span class="comment">// 两个点集中的顶点数量</span></span><br><span class="line">ll dfn;<span class="comment">// 时间戳记</span></span><br><span class="line">ll res;<span class="comment">// 匹配数</span></span><br><span class="line"><span class="built_in">augment_path</span>(ll _n, ll _m) : <span class="built_in">n</span>(_n+<span class="number">1</span>), <span class="built_in">m</span>(_m+<span class="number">1</span>)&#123;</span><br><span class="line"><span class="built_in">assert</span>(<span class="number">0</span> &lt;= n &amp;&amp; <span class="number">0</span> &lt;= m);</span><br><span class="line">pa = <span class="built_in">vector</span>&lt;ll&gt;(n, <span class="number">-1</span>);</span><br><span class="line">pb = <span class="built_in">vector</span>&lt;ll&gt;(m, <span class="number">-1</span>);</span><br><span class="line">vis = <span class="built_in">vector</span>&lt;ll&gt;(n);</span><br><span class="line">g.<span class="built_in">resize</span>(n);</span><br><span class="line">res = <span class="number">0</span>;</span><br><span class="line">dfn = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 添加一条左部点from到右部点to的边</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">add</span><span class="params">(ll from, ll to)</span></span>&#123;</span><br><span class="line"><span class="built_in">assert</span>(<span class="number">0</span> &lt; from &amp;&amp; from &lt;= n &amp;&amp; <span class="number">0</span> &lt; to &amp;&amp; to &lt;= m);</span><br><span class="line">g[from].<span class="built_in">push_back</span>(to);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">dfs</span><span class="params">(ll v)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">vis[v] = dfn;</span><br><span class="line"><span class="keyword">for</span> (ll u : g[v])&#123;</span><br><span class="line"><span class="keyword">if</span> (pb[u] == <span class="number">-1</span>)&#123;</span><br><span class="line">pb[u] = v;</span><br><span class="line">pa[v] = u;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (ll u : g[v])&#123;</span><br><span class="line"><span class="keyword">if</span> (vis[pb[u]] != dfn &amp;&amp; <span class="built_in">dfs</span>(pb[u]))&#123;</span><br><span class="line">pa[v] = u;</span><br><span class="line">pb[u] = v;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 返回最大匹配数</span></span><br><span class="line"><span class="function">ll <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="keyword">while</span> (<span class="literal">true</span>)&#123;</span><br><span class="line">dfn++;</span><br><span class="line">ll cnt = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (ll i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line"><span class="keyword">if</span> (pa[i] == <span class="number">-1</span> &amp;&amp; <span class="built_in">dfs</span>(i)) cnt++;</span><br><span class="line"><span class="keyword">if</span> (cnt == <span class="number">0</span>) <span class="keyword">break</span>; </span><br><span class="line">res += cnt;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">ll n, m, e;</span><br><span class="line">cin &gt;&gt; n &gt;&gt; m &gt;&gt; e;</span><br><span class="line"><span class="function">augment_path <span class="title">G</span><span class="params">(n, m)</span></span>;</span><br><span class="line">ll u, v;</span><br><span class="line"><span class="keyword">for</span> (ll i = <span class="number">0</span>; i &lt; e; i++)</span><br><span class="line">&#123;</span><br><span class="line">cin &gt;&gt; u &gt;&gt; v;</span><br><span class="line">G.<span class="built_in">add</span>(u, v);</span><br><span class="line">&#125;</span><br><span class="line">cout &lt;&lt; G.<span class="built_in">solve</span>() &lt;&lt; endl;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法模板 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法模板 </tag>
+            
+            <tag> 图论 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>最小生成树Kruskal</title>
+      <link href="/posts/kruskal.html"/>
+      <url>/posts/kruskal.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Kruskal">Kruskal</h2><p>最小生成树：从图中选出一些边，构成一个树，包含图中所有点，且边的权值之和最小。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">MSTree</span>&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">Edge</span>&#123;</span><br><span class="line">        ll u,v,w;</span><br><span class="line">        <span class="type">bool</span> <span class="keyword">operator</span>&gt;(<span class="type">const</span> Edge &amp;e) <span class="type">const</span>&#123;</span><br><span class="line">            <span class="keyword">return</span> w &gt; e.w;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    ll n;</span><br><span class="line">    DSU dsu;</span><br><span class="line">    priority_queue&lt;Edge,vector&lt;Edge&gt;,greater&lt;Edge&gt;&gt; Q;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    ll ans=<span class="number">0</span>;</span><br><span class="line">    vector&lt;vector&lt;pll&gt;&gt; G; <span class="comment">//最小生成树的邻接表</span></span><br><span class="line">    vector&lt;ll&gt; fa; <span class="comment">//最小生成树i的父节点</span></span><br><span class="line">    <span class="built_in">MSTree</span>(ll _n):<span class="built_in">n</span>(_n),<span class="built_in">dsu</span>(_n),<span class="built_in">G</span>(_n+<span class="number">1</span>),<span class="built_in">fa</span>(n+<span class="number">1</span>,<span class="number">0</span>)&#123;&#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">add_edge</span><span class="params">(ll u,ll v,ll w)</span></span>&#123; Q.<span class="built_in">push</span>(&#123;u,v,w&#125;); &#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">        ans = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(!Q.<span class="built_in">empty</span>())&#123;</span><br><span class="line">            <span class="keyword">auto</span> e = Q.<span class="built_in">top</span>();Q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">if</span>(dsu.<span class="built_in">find</span>(e.u) != dsu.<span class="built_in">find</span>(e.v))&#123;</span><br><span class="line">                dsu.<span class="built_in">merge</span>(e.u,e.v);</span><br><span class="line">                G[e.u].<span class="built_in">emplace_back</span>(e.v,e.w);</span><br><span class="line">                G[e.v].<span class="built_in">emplace_back</span>(e.u,e.w);</span><br><span class="line">                ans += e.w;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//dfs求fa</span></span><br><span class="line">        <span class="keyword">auto</span> DFS = [&amp;](<span class="keyword">auto</span> &amp;&amp;self, ll u=<span class="number">1</span>,ll f=<span class="number">0</span>) -&gt; <span class="type">void</span>&#123;</span><br><span class="line">            fa[u] = f;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">auto</span> &amp;p:G[u])&#123;</span><br><span class="line">                ll v = p.first;</span><br><span class="line">                <span class="keyword">if</span>(v == f) <span class="keyword">continue</span>;</span><br><span class="line">                <span class="built_in">self</span>(self,v,u);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="built_in">DFS</span>(DFS);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//判断图是否连通</span></span><br><span class="line">    <span class="function"><span class="type">bool</span> <span class="title">connected</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> dsu.size[dsu.<span class="built_in">find</span>(<span class="number">1</span>)] == n;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ll n,m;cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">    <span class="function">MSTree <span class="title">mst</span><span class="params">(n)</span></span>;</span><br><span class="line">    ll u,v,w;</span><br><span class="line">    <span class="built_in">FORLL</span>(i,<span class="number">1</span>,m)&#123;</span><br><span class="line">        cin &gt;&gt; u &gt;&gt; v &gt;&gt; w;</span><br><span class="line">        mst.<span class="built_in">add_edge</span>(u,v,w);</span><br><span class="line">    &#125;</span><br><span class="line">    mst.<span class="built_in">solve</span>();</span><br><span class="line">    <span class="keyword">if</span>(mst.<span class="built_in">connected</span>()) cout &lt;&lt; mst.ans &lt;&lt; endl;</span><br><span class="line">    <span class="keyword">else</span> cout &lt;&lt; <span class="string">&quot;orz\n&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法模板 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法模板 </tag>
+            
+            <tag> 图论 </tag>
             
         </tags>
       
@@ -522,33 +576,6 @@
             <tag> 算法模板 </tag>
             
             <tag> 数学 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>单源最短路Dijkstra</title>
-      <link href="/posts/dijkstra.html"/>
-      <url>/posts/dijkstra.html</url>
-      
-        <content type="html"><![CDATA[<h2 id="非负权值单源最短路Dijkstra">非负权值单源最短路Dijkstra</h2><p>使用优先队列优化的Dijkstra算法，O(mlogm)</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Dijkstra</span>&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">edge</span>&#123; ll v, w; &#125;;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">node</span>&#123;</span><br><span class="line">        ll dis, u;</span><br><span class="line">        <span class="type">bool</span> <span class="keyword">operator</span>&gt;(<span class="type">const</span> node &amp;a) <span class="type">const</span> &#123; <span class="keyword">return</span> dis &gt; a.dis; &#125;</span><br><span class="line">    &#125;; </span><br><span class="line">    vector&lt;vector&lt;edge&gt;&gt; G;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; vis;</span><br><span class="line">    vector&lt;ll&gt; dis;</span><br><span class="line">    priority_queue&lt;node,vector&lt;node&gt;,greater&lt;node&gt;&gt; Q;</span><br><span class="line">    ll n=<span class="number">0</span>;</span><br><span class="line">    <span class="comment">//换源前初始化</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Init</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(!Q.<span class="built_in">empty</span>()) Q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="built_in">FORLL</span>(i,<span class="number">1</span>,n)&#123;</span><br><span class="line">            vis[i]=<span class="number">0</span>;</span><br><span class="line">            dis[i]=INF;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Dijkstra</span>(ll _n):<span class="built_in">n</span>(_n),<span class="built_in">G</span>(_n+<span class="number">1</span>),<span class="built_in">vis</span>(_n+<span class="number">1</span>,<span class="number">0</span>),<span class="built_in">dis</span>(_n+<span class="number">1</span>,INF)&#123;&#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">addedge</span><span class="params">(ll u,ll v,ll w)</span></span>&#123;<span class="comment">//加边</span></span><br><span class="line">        G[u].<span class="built_in">push_back</span>(&#123;v,w&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//s为源点的单源最短路</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">(ll s)</span></span>&#123;</span><br><span class="line">        <span class="built_in">Init</span>();</span><br><span class="line">        dis[s] = <span class="number">0</span>;</span><br><span class="line">        Q.<span class="built_in">push</span>(&#123;<span class="number">0</span>, s&#125;);</span><br><span class="line">        <span class="keyword">while</span> (!Q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            ll u = Q.<span class="built_in">top</span>().u;</span><br><span class="line">            Q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">if</span> (vis[u]) <span class="keyword">continue</span>;</span><br><span class="line">            vis[u] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span> e : G[u]) &#123;</span><br><span class="line">                ll v = e.v, w = e.w;</span><br><span class="line">                <span class="keyword">if</span> (dis[v] &gt; dis[u] + w) &#123;</span><br><span class="line">                    dis[v] = dis[u] + w;</span><br><span class="line">                    Q.<span class="built_in">push</span>(&#123;dis[v], v&#125;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//到t的最短路</span></span><br><span class="line">    <span class="function">ll <span class="title">getdis</span><span class="params">(ll t)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> dis[t];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//访问dis数组</span></span><br><span class="line">    ll <span class="keyword">operator</span>[](ll i)&#123;</span><br><span class="line">        <span class="keyword">return</span> dis[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> 算法模板 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 算法模板 </tag>
-            
-            <tag> 图论 </tag>
             
         </tags>
       
@@ -1427,6 +1454,33 @@
     
     
     <entry>
+      <title>单源最短路Dijkstra</title>
+      <link href="/posts/dijkstra.html"/>
+      <url>/posts/dijkstra.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="Dijkstra">Dijkstra</h2><p>非负权值单源最短路，Dijkstra算法，O(mlogm)</p><p>从未访问的点中选出一个距离源点最近的点，加入到已访问的点中，直到所有点都被访问过为止。</p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Dijkstra</span>&#123;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">edge</span>&#123; ll v, w; &#125;;</span><br><span class="line">    <span class="keyword">struct</span> <span class="title class_">node</span>&#123;</span><br><span class="line">        ll dis, u;</span><br><span class="line">        <span class="type">bool</span> <span class="keyword">operator</span>&gt;(<span class="type">const</span> node &amp;a) <span class="type">const</span> &#123; <span class="keyword">return</span> dis &gt; a.dis; &#125;</span><br><span class="line">    &#125;; </span><br><span class="line">    vector&lt;vector&lt;edge&gt;&gt; G;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; vis;</span><br><span class="line">    vector&lt;ll&gt; dis;</span><br><span class="line">    priority_queue&lt;node,vector&lt;node&gt;,greater&lt;node&gt;&gt; Q;</span><br><span class="line">    ll n=<span class="number">0</span>;</span><br><span class="line">    <span class="comment">//换源前初始化</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">Init</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(!Q.<span class="built_in">empty</span>()) Q.<span class="built_in">pop</span>();</span><br><span class="line">        <span class="built_in">FORLL</span>(i,<span class="number">1</span>,n)&#123;</span><br><span class="line">            vis[i]=<span class="number">0</span>;</span><br><span class="line">            dis[i]=INF;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">Dijkstra</span>(ll _n):<span class="built_in">n</span>(_n),<span class="built_in">G</span>(_n+<span class="number">1</span>),<span class="built_in">vis</span>(_n+<span class="number">1</span>,<span class="number">0</span>),<span class="built_in">dis</span>(_n+<span class="number">1</span>,INF)&#123;&#125;</span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">addedge</span><span class="params">(ll u,ll v,ll w)</span></span>&#123;<span class="comment">//加边</span></span><br><span class="line">        G[u].<span class="built_in">push_back</span>(&#123;v,w&#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//s为源点的单源最短路</span></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">(ll s)</span></span>&#123;</span><br><span class="line">        <span class="built_in">Init</span>();</span><br><span class="line">        dis[s] = <span class="number">0</span>;</span><br><span class="line">        Q.<span class="built_in">push</span>(&#123;<span class="number">0</span>, s&#125;);</span><br><span class="line">        <span class="keyword">while</span> (!Q.<span class="built_in">empty</span>()) &#123;</span><br><span class="line">            ll u = Q.<span class="built_in">top</span>().u;</span><br><span class="line">            Q.<span class="built_in">pop</span>();</span><br><span class="line">            <span class="keyword">if</span> (vis[u]) <span class="keyword">continue</span>;</span><br><span class="line">            vis[u] = <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">auto</span> e : G[u]) &#123;</span><br><span class="line">                ll v = e.v, w = e.w;</span><br><span class="line">                <span class="keyword">if</span> (dis[v] &gt; dis[u] + w) &#123;</span><br><span class="line">                    dis[v] = dis[u] + w;</span><br><span class="line">                    Q.<span class="built_in">push</span>(&#123;dis[v], v&#125;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//到t的最短路</span></span><br><span class="line">    <span class="function">ll <span class="title">getdis</span><span class="params">(ll t)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> dis[t];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//访问dis数组</span></span><br><span class="line">    ll <span class="keyword">operator</span>[](ll i)&#123;</span><br><span class="line">        <span class="keyword">return</span> dis[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法模板 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法模板 </tag>
+            
+            <tag> 图论 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>教程|NoneBot2本地部署QQ机器人</title>
       <link href="/posts/nonebot2_qqbot_deployment.html"/>
       <url>/posts/nonebot2_qqbot_deployment.html</url>
@@ -1437,9 +1491,9 @@
       
         <tags>
             
-            <tag> QQ机器人 </tag>
-            
             <tag> NoneBot2 </tag>
+            
+            <tag> QQ机器人 </tag>
             
         </tags>
       
