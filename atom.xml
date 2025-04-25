@@ -167,9 +167,9 @@
     <category term="深度学习" scheme="https://www.cclmsy.cc/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
     
-    <category term="Pytorch" scheme="https://www.cclmsy.cc/tags/Pytorch/"/>
-    
     <category term="深度学习" scheme="https://www.cclmsy.cc/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="Pytorch" scheme="https://www.cclmsy.cc/tags/Pytorch/"/>
     
     <category term="论文复现" scheme="https://www.cclmsy.cc/tags/%E8%AE%BA%E6%96%87%E5%A4%8D%E7%8E%B0/"/>
     
