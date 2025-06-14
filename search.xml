@@ -4,7 +4,36 @@
   
     
     <entry>
-      <title>复现|PlugIR：基于对话的图像检索系统</title>
+      <title>论文笔记|MLLM-as-a-Judge for Image Safety without Human Labeling</title>
+      <link href="/posts/CLUE.html"/>
+      <url>/posts/CLUE.html</url>
+      
+        <content type="html"><![CDATA[<p>论文：<a href="https://arxiv.org/abs/2501.00192">MLLM-as-a-Judge for Image Safety without Human Labeling</a></p><h2 id="1-Introduction">1. Introduction</h2><p>方向：Image Safety Judgment（图像安全性判断）</p><p>现有方案（Traditional Classifer、MLLM）存在的问题：</p><ul><li>极度依赖人工标注数据，有效但耗费时间和资源 “largely depend on human annotator”</li><li>安全性规则错综复杂，标注人员很难始终统一标准 “it challenging for human annotators to consistently apply”</li></ul><p>因此，一种“<strong>利用预训练MLLM的能力，根据一套安全规则，以0-Shot方式判断图像安全性</strong>”的方案受到关注。</p><p>对MLLM进行安全性规则查询不足以实现可靠的安全性检测，原因有以下三点：</p><ol><li><strong>安全性规则描述模糊或具有主观性</strong>。样例询问“不适合公众观看的内容”描述笼统，且具有主观性，即使人工判断也难以给出统一的答案</li><li><strong>当前的MLLM难以推理复杂冗长的安全性规则</strong>。样例询问包含2个分句25个英文单词，MLLM可能无法完全理解</li><li><strong>MLLM存在固有偏差</strong>。样例询问“是否有喉部伤口“，即使图片中只有地面和毛发上有血迹，MLLM也可能会错误地认为有喉部伤口</li></ol><p><img src="https://source.cclmsy.cc/Posts/DL/CLUE/image.png" alt="alt text"></p><p>为了解决这些问题，本文提出了<strong>CLUE</strong>（<strong>C</strong>ontrastive M<strong>L</strong>LM J<strong>u</strong>dg<strong>e</strong>），显著提高了MLLM 0-Shot Image Safety Judge的有效性</p><ol><li>将安全性规则<strong>客观化</strong>，转化为MLLM可以有效处理的客观、可行的规则</li><li>一次检查一个规则<ul><li>为了处理复杂或冗长的规则，每条规则转化为一组逻辑上完整的<strong>前提条件链</strong></li><li>为了加快所有规则的迭代过程，采用<strong>多模态对比模型</strong>（如CLIP）衡量规则和图像的相关性</li></ul></li><li>进行<strong>去偏标记概率分析（debiased token probability analysis）</strong>，使用去偏概率预测结果<ul><li>减少由语言先验和非图像中心区域造成的偏差</li></ul></li></ol><p>当标记概率分析置信度低时，CLUE会使用思维链进行深入推理。</p><h2 id="2-BG">2. BG</h2><ol><li>Image Content Safety 图像内容安全</li><li>Safety Judge Model 安全性判断模型<ul><li>最初的传统分类器（Traditional Classifier）、最近的微调LLM<ul><li>局限：人工标注耗时且昂贵</li></ul></li><li>近期：0-shot MLLM（Multimodal Large Language Model）<ul><li>性能不令人满意</li></ul></li></ul></li></ol><h2 id="3-Method">3. Method</h2><h3 id="问题模型">问题模型</h3><p>给定一张图像$x$和一组安全性规则$G$，有以下2个目标：</p><ol><li>确定图像$x$是否违反了$G$中的任何规则</li><li>提供识别出的违反规则的列表</li></ol><p>表示为：$A(x,G)\rightarrow(s,R)$</p><ul><li>$s$：识别结果（安全/不安全）</li><li>$R$：违反的具体安全规则</li></ul><h3 id="3-1-Rules-Objectification-规则客观化">3.1 Rules Objectification 规则客观化</h3><p>将LLM作为优化器（LLM-as-an-Optimizer）对规则进行客观化。</p><p>让LLM对每条规则进行1~10分的打分，修改分数低于阈值（9）的规则，直到达到9分。</p><p>LLM客观性评估Prompt：</p><p><img src="https://source.cclmsy.cc/Posts/DL/CLUE/image-1.png" alt="alt text"></p><p>原始规则集：</p><p><img src="https://source.cclmsy.cc/Posts/DL/CLUE/image-2.png" alt="alt text"></p><p>客观化后的规则集：</p><p><img src="https://source.cclmsy.cc/Posts/DL/CLUE/image-3.png" alt="alt text"></p><p>以第4条为例，“挨着另一个人躺在床上的人”的7分描述修改为“两个互相接触的人躺在床上”的9分描述”</p><h3 id="3-2-Relevance-Scanning-相关性扫描">3.2 Relevance Scanning 相关性扫描</h3><p>MLLM处理复杂结构时推理能力有限，不能把所有规则一次性输入。<br>尝试枚举规则输入，但是效率不高，而且很多规则可能和图片无关。<br>因此，需要过滤掉与图像无关的规则，减少MLLM的工作量以提高效率。</p><p>CLUE使用了预训练的文本图像编码器CLIP，通过计算余弦相似度来衡量规则和图像的相关性。</p><p>满足$$cos(I(x),T®)&gt;t$$的规则$r$被认为与图像$x$相关</p><ul><li>$I(x)$：图像$x$的CLIP编码</li><li>$T®$：规则$r$的CLIP编码</li><li>$t$：阈值</li></ul><p>使用编码器的好处：速度（比MLLM）明显快，因为和MLLM数十亿的参数数量相比，Encoder的大小要小得多</p><p>实验证明，t设置为0.22时，能够过滤掉67%的不相关规则，同时保留96.6%的实际违规规则</p><h3 id="3-3-Precondition-Extraction-前提条件提取">3.3 Precondition Extraction 前提条件提取</h3><p>自动将每条规则转化为一组逻辑上完整的前提条件链。</p><p>例如“不应描绘人物或动物身体上带有清晰可见、血腥且可能会导致其立即死亡的伤害”被转化为：</p><ol><li>图中有可见的人 OR 图中有可见的动物</li><li>身体带有清晰可见的血腥伤害</li><li>伤害可能会导致其立即死亡</li></ol><p><img src="https://source.cclmsy.cc/Posts/DL/CLUE/image-4.png" alt="alt text"></p><p>LLM前提条件提取Prompt：</p><p><img src="https://source.cclmsy.cc/Posts/DL/CLUE/image-5.png" alt="alt text"></p><h3 id="3-4-Debiased-Token-Probability-Analysis-去偏标记概率分析">3.4 Debiased Token Probability Analysis 去偏标记概率分析</h3><p>给定MLLM $\mathcal{M}$、图像$x$和前提条件$c$，我们将前提条件得分记为：</p><p><img src="https://source.cclmsy.cc/Posts/DL/CLUE/image-6.png" alt="alt text"></p><p>也就是面对图像$x$，MLLM对前提条件$c$标记为“Yes”的概率。</p><p>如果高于一定值，则认为图像$x$满足了前提条件$c$。</p><p>一个直观的想法是把阈值设为0.5，但这个方法存在问题。</p><p>MLLM具有token probability bias（标记概率偏差），即材料本身的含义或属性会对模型的输出产生误导。</p><h4 id="3-4-1-Bias-from-Language-Prior-语言先验偏差">3.4.1 Bias from Language Prior 语言先验偏差</h4><p>研究表明，MLLM的标记概率会受到模型语言先验的影响。</p><p>在InternVL2-76B上，大部分图像对于“血腥伤害可能会导致其立即死亡”的“Yes”标记概率都很低，因为根据训练数据，这种内容通常不会出现在图像中。</p><p>解决策略：衡量有无图像token查询之间的得分差异。</p><p>$$<br>\mathcal{M}(x, c) - \mathcal{M}(None, c)<br>$$</p><ul><li>低于0，则图像$x$很可能不满足前提条件$c$；</li><li>明显高于0，图像$x$极有可能满足前提条件$c$</li></ul><h4 id="3-4-2-Bias-from-Image-来自图像的偏差">3.4.2 Bias from Image 来自图像的偏差</h4><p>图像的非核心部分也会带来强烈的偏差。</p><p>比如图像中的人上半身裸体，MLLM对提问“这个人裸露臀部”的“Yes”标记概率会很高，因为根据训练数据，上半身裸露和臀部裸露具有较强的相关性。</p><p>解决策略：衡量整幅图像和删除图像核心区域$i$后图像之间的得分差异</p><p>$$<br>\mathcal{M}(x, c) - \mathcal{M}(x \ominus i, c)<br>$$</p><p><img src="https://source.cclmsy.cc/Posts/DL/CLUE/image-7.png" alt="alt text"></p><ul><li>使用最先进的开放词汇对象检测器OWLv2</li><li>明显高于0，且对象检测边界框置信度较高（0.05），图像$x$极有可能满足前提条件$c$</li></ul><h3 id="3-5-Reasoning-based-Judgment">3.5 Reasoning-based Judgment</h3><p>如果基于去偏标记概率分析的置信度不够，CLUE会采用基于推理的判断。</p><p>分为2步：</p><ol><li><strong>思维链生成</strong><ul><li>使用LLM生成思维链，推理图像是否满足前提条件</li><li>对格式不做要求</li></ul></li><li><strong>格式化</strong>：以Json格式输出预测结果和理由</li></ol><p>响应速度慢，但在之前步骤置信度不足的情况下，可以提供更可靠的结果。</p><h3 id="3-6-Algorithm">3.6 Algorithm</h3><p><img src="https://source.cclmsy.cc/Posts/DL/CLUE/image-8.png" alt="alt text"></p><h2 id="4-个人思考">4. 个人思考</h2><h3 id="4-1-论文亮点">4.1 论文亮点</h3><h4 id="4-1-1-摆脱对人工标注的依赖">4.1.1 摆脱对人工标注的依赖</h4><ol><li>采用0-Shot方式，不需要人工标注数据</li><li>扩展性、适应性强，如果安全规则发生变化，只需要更新规则集，无需重新标注数据、微调模型</li><li>表现优异：结果远高于baseline（不论是0-Shot还是基于fine-tuning的方法）</li></ol><h3 id="4-1-2-洞察与解决MLLM的偏差问题">4.1.2 洞察与解决MLLM的偏差问题</h3><ol><li>作者洞察到Pre-trained MLLM在处理图像安全性判断时存在偏差问题</li><li>提出了去偏标记概率分析（debiased token probability analysis）的方法，针对语言先验和图像非核心区域分别进行去偏处理</li></ol><h3 id="4-1-3-规则客观化与前提条件提取">4.1.3 规则客观化与前提条件提取</h3><ol><li>考虑了安全规则描述可能具有模糊性和主观性的问题</li><li>通过LLM对规则进行客观化处理，确保规则描述清晰、可操作</li><li>对规则进行前提条件提取，将复杂规则转化为逻辑上完整的前提条件链，便于MLLM处理</li></ol><h3 id="4-1-4-多阶段推理流程">4.1.4 多阶段推理流程</h3><ol><li>通过相关性扫描过滤不相关规则，减少MLLM的工作量</li><li>在去偏标记概率分析置信度不足时，采用思维链进行深入推理，结合了两者的优势</li></ol><h2 id="4-2-论文存在的问题">4.2 论文存在的问题</h2><h3 id="4-2-1-规则客观化的局限性">4.2.1 规则客观化的局限性</h3><ol><li>仅使用简短的Prompt提示LLM进行1~10分的评分，但并没有具体的评分标准或示例，可能导致评分结果不一致</li><li>不能保证LLM的评分就是客观准确的。<ul><li>LLM本身就因训练数据等原因存在偏差，甚至可能产生幻觉</li><li>每一次调用LLM的结果可能会有所不同，缺乏一致性</li></ul></li><li>LLM可能根据自己的理解将规则修改为子规则，而遗漏部分情况，影响判断结果</li></ol><h3 id="4-2-2-未考虑MLLM受对抗攻击的影响">4.2.2 未考虑MLLM受对抗攻击的影响</h3><p>MLLM已被证明易受对抗性攻击：小幅度修改输入图像，导致模型输出错误的结果。</p><p>一篇研究<a href="https://arxiv.org/abs/2505.21494">《Adversarial Attacks against Closed-Source MLLMs via Feature Optimal Alignment》</a>甚至可以对闭源的MLLM进行对抗攻击。</p><p>CLUE中就存在多个可能被对抗攻击的环节：</p><ol><li>CLIP编码器的相关性扫描：设计一个不安全的图像，其对抗性扰动专门针对CLIP模型 ，使其对相关安全规则产生低相关性分数，从而导致大部分相关规则被过滤掉，进而减少图像被判断为不安全的可能性</li><li>由于前提条件提取，复杂规则被分解为多个前提条件，攻击者可以针对个别条件进行对抗性扰动，使得某些前提条件的标记概率低于阈值</li></ol><h2 id="4-3-改进思路和建议">4.3 改进思路和建议</h2><h3 id="4-3-1-规则客观化的改进">4.3.1 规则客观化的改进</h3><ol><li>引入评分标准：为LLM评分提供明确的标准和示例，确保评分的一致性和客观性</li><li>多模型并行取平均：根据同一规则，调用多个不同的LLM进行评分，取平均值，减少单一模型偏差的影响</li></ol><h3 id="4-3-2-增强对抗攻击的防御">4.3.2 增强对抗攻击的防御</h3><p>一个实用、免训练的方法是采用模型集成。<br>2020年9月的一篇论文<a href="https://arxiv.org/abs/2009.09612">《Improving Ensemble Robustness by Collaboratively Promoting and Demoting Adversarial Robustness》</a>提出基于集合的对抗训练是实现对抗攻击鲁棒性的一种方法。</p><p>例如，让多款不同的MLLM（如InternVL、LLaVA、GPT-4V）对同一张图片进行判断，并要求达成共识，这可以提高鲁棒性，因为针对某一模型的攻击可能无法迁移到其他模型上。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 论文笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 论文笔记 </tag>
+            
+            <tag> MLLLM </tag>
+            
+            <tag> CV </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>论文笔记&amp;实现|PlugIR：基于对话的图像检索系统</title>
       <link href="/posts/PlugIR.html"/>
       <url>/posts/PlugIR.html</url>
       
@@ -20,9 +49,11 @@
       
         <tags>
             
+            <tag> 图像检索 </tag>
+            
             <tag> 论文实现 </tag>
             
-            <tag> 深度学习 </tag>
+            <tag> MLLM </tag>
             
         </tags>
       
@@ -47,7 +78,7 @@
       
         <tags>
             
-            <tag> 计算机视觉 </tag>
+            <tag> CV </tag>
             
             <tag> 图像检索 </tag>
             
@@ -74,9 +105,9 @@
       
         <tags>
             
-            <tag> 计算机视觉 </tag>
-            
             <tag> 图像检索 </tag>
+            
+            <tag> 计算机视觉 </tag>
             
         </tags>
       
@@ -110,7 +141,7 @@
     
     
     <entry>
-      <title>复现|ChatIR：基于对话的图像检索系统</title>
+      <title>论文笔记&amp;实现|ChatIR：基于对话的图像检索系统</title>
       <link href="/posts/ChatIR.html"/>
       <url>/posts/ChatIR.html</url>
       
@@ -126,9 +157,11 @@
       
         <tags>
             
+            <tag> 图像检索 </tag>
+            
             <tag> 论文实现 </tag>
             
-            <tag> 深度学习 </tag>
+            <tag> MLLM </tag>
             
         </tags>
       
@@ -1680,9 +1713,9 @@
       
         <tags>
             
-            <tag> QQ机器人 </tag>
-            
             <tag> NoneBot2 </tag>
+            
+            <tag> QQ机器人 </tag>
             
         </tags>
       
