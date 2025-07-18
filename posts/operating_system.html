@@ -1,0 +1,1335 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><div id="myscoll"></div><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>《操作系统》课程笔记 | CCLMSY💫</title><meta name="keywords" content="课程笔记"><meta name="author" content="深翼💫"><meta name="copyright" content="深翼💫"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="操作操作系统操作计算机完成操作（乐">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《操作系统》课程笔记">
+<meta property="og:url" content="https://www.cclmsy.cc/posts/operating_system.html">
+<meta property="og:site_name" content="CCLMSY💫">
+<meta property="og:description" content="操作操作系统操作计算机完成操作（乐">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://source.cclmsy.cc/Covers/188.webp">
+<meta property="article:published_time" content="2025-06-16T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-07-18T11:17:56.833Z">
+<meta property="article:author" content="深翼💫">
+<meta property="article:tag" content="课程笔记">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://source.cclmsy.cc/Covers/188.webp"><link rel="shortcut icon" href="/favicon.ico"><link rel="canonical" href="https://www.cclmsy.cc/posts/operating_system"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?6db69a703e8f9f3720128c22f28977ca";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.js',
+      css: 'https://cdnjs.cloudflare.com/ajax/libs/flickr-justified-gallery/2.1.2/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: true
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '《操作系统》课程笔记',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-07-18 19:17:56'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          const now = new Date()
+          const hour = now.getHours()
+          const isNight = hour <= 6 || hour >= 18
+          if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+          else if (t === 'light') activateLightMode()
+          else activateDarkMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="https://cdn1.tianli0.top/npm/element-ui@2.15.6/packages/theme-chalk/lib/index.css"><style id="themeColor"></style><style id="rightSide"></style><style id="transPercent"></style><style id="blurNum"></style><style id="settingStyle"></style><span id="fps"></span><style id="defineBg"></style><style id="menu_shadow"></style><script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({id:"3G7PdsOcjAvosjUF",ck:"3G7PdsOcjAvosjUF",autoTrack:true,hashMode:true})</script><svg aria-hidden="true" style="position:absolute; overflow:hidden; width:0; height:0"><symbol id="icon-sun" viewBox="0 0 1024 1024"><path d="M960 512l-128 128v192h-192l-128 128-128-128H192v-192l-128-128 128-128V192h192l128-128 128 128h192v192z" fill="#FFD878" p-id="8420"></path><path d="M736 512a224 224 0 1 0-448 0 224 224 0 1 0 448 0z" fill="#FFE4A9" p-id="8421"></path><path d="M512 109.248L626.752 224H800v173.248L914.752 512 800 626.752V800h-173.248L512 914.752 397.248 800H224v-173.248L109.248 512 224 397.248V224h173.248L512 109.248M512 64l-128 128H192v192l-128 128 128 128v192h192l128 128 128-128h192v-192l128-128-128-128V192h-192l-128-128z" fill="#4D5152" p-id="8422"></path><path d="M512 320c105.888 0 192 86.112 192 192s-86.112 192-192 192-192-86.112-192-192 86.112-192 192-192m0-32a224 224 0 1 0 0 448 224 224 0 0 0 0-448z" fill="#4D5152" p-id="8423"></path></symbol><symbol id="icon-moon" viewBox="0 0 1024 1024"><path d="M611.370667 167.082667a445.013333 445.013333 0 0 1-38.4 161.834666 477.824 477.824 0 0 1-244.736 244.394667 445.141333 445.141333 0 0 1-161.109334 38.058667 85.077333 85.077333 0 0 0-65.066666 135.722666A462.08 462.08 0 1 0 747.093333 102.058667a85.077333 85.077333 0 0 0-135.722666 65.024z" fill="#FFB531" p-id="11345"></path><path d="M329.728 274.133333l35.157333-35.157333a21.333333 21.333333 0 1 0-30.165333-30.165333l-35.157333 35.157333-35.114667-35.157333a21.333333 21.333333 0 0 0-30.165333 30.165333l35.114666 35.157333-35.114666 35.157334a21.333333 21.333333 0 1 0 30.165333 30.165333l35.114667-35.157333 35.157333 35.157333a21.333333 21.333333 0 1 0 30.165333-30.165333z" fill="#030835" p-id="11346"></path></symbol></svg><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css" media="print" onload="this.media='screen'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="CCLMSY💫" type="application/atom+xml">
+</head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"><div class="loading-bg"><div class="loading-img"></div><div class="loading-image-dot"></div></div></div><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/Avatars/Avatar.jpg" onerror="onerror=null;src='/assets/ErrAvatar.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">94</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">30</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pinweishenghuo"></use></svg><span class="menu_word" style="font-size:17px"> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/life/music"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-yinle">                   </use></svg><span class="menu_word" style="font-size:17px"> 八音盒</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying1">                   </use></svg><span class="menu_word" style="font-size:17px"> 影院</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/games"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxishoubing">                   </use></svg><span class="menu_word" style="font-size:17px"> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:17px"> 八宝箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-tubiaozhizuomoban">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/animation"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-nvwumao">                   </use></svg><span class="menu_word" style="font-size:17px"> 动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-zhifengche">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiaoxinxi"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyan">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-lianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangye"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--tongjibiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/echarts"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shujutongji1">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 旧时光</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/about"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-maoliang"></use></svg><span class="menu_word" style="font-size:17px"> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">CCLMSY💫</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-home"></use></svg><span class="menu_word" style="font-size:17px"> 首页</span></a></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--article"></use></svg><span class="menu_word" style="font-size:17px"> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/archives"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-guidang1">                   </use></svg><span class="menu_word" style="font-size:17px"> 归档</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/tags"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-sekuaibiaoqian">                   </use></svg><span class="menu_word" style="font-size:17px"> 标签</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/categories"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-fenlei">                   </use></svg><span class="menu_word" style="font-size:17px"> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-pinweishenghuo"></use></svg><span class="menu_word" style="font-size:17px"> 休闲</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/life/music"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-yinle">                   </use></svg><span class="menu_word" style="font-size:17px"> 八音盒</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/movies"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-dianying1">                   </use></svg><span class="menu_word" style="font-size:17px"> 影院</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/life/games"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-youxishoubing">                   </use></svg><span class="menu_word" style="font-size:17px"> 游戏</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xiangzi"></use></svg><span class="menu_word" style="font-size:17px"> 八宝箱</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/box/gallery"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-tubiaozhizuomoban">                   </use></svg><span class="menu_word" style="font-size:17px"> 画廊</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/animation"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-nvwumao">                   </use></svg><span class="menu_word" style="font-size:17px"> 动画</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/box/nav"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-zhifengche">                   </use></svg><span class="menu_word" style="font-size:17px"> 网址导航</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shejiaoxinxi"></use></svg><span class="menu_word" style="font-size:17px"> 社交</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/comments"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-liuyan">                   </use></svg><span class="menu_word" style="font-size:17px"> 留言板</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/social/link"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-lianjie">                   </use></svg><span class="menu_word" style="font-size:17px"> 友人帐</span></a></li></ul></div><div class="menus_item"><a class="site-page group faa-parent animated-hover hide" href="javascript:void(0);"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-wangye"></use></svg><span class="menu_word" style="font-size:17px"> 网站</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child faa-parent animated-hover" href="/site/census"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon--tongjibiao">                   </use></svg><span class="menu_word" style="font-size:17px"> 网站统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/echarts"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-shujutongji1">                   </use></svg><span class="menu_word" style="font-size:17px"> 文章统计</span></a></li><li><a class="site-page child faa-parent animated-hover" href="/site/time"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-xianxingshalou">                   </use></svg><span class="menu_word" style="font-size:17px"> 旧时光</span></a></li></ul></div><div class="menus_item"><a class="site-page faa-parent animated-hover" href="/about"><svg class="menu_icon faa-tada" aria-hidden="true" style="width:1.30em;height:1.30em;vertical-align:-0.15em;fill:currentColor;overflow:hidden;"><use xlink:href="#icon-maoliang"></use></svg><span class="menu_word" style="font-size:17px"> 关于</span></a></div></div><center id="name-container"><a id="page-name" href="javascript:scrollToTop()">PAGE_NAME</a></center><div id="nav-right"><div id="search-button"><a class="search faa-parent animated-hover" title="检索站内任何你想要的信息"><svg class="faa-tada icon" style="height:24px;width:24px;fill:currentColor;position:relative;top:6px" aria-hidden="true"><use xlink:href="#icon-valentine_-search-love-find-heart"></use></svg><span> 搜索</span></a></div><a class="meihua faa-parent animated-hover" onclick="toggleWinbox()" title="美化设置-自定义你的风格" id="meihua-button"><svg class="faa-tada icon" style="height:26px;width:26px;fill:currentColor;position:relative;top:8px" aria-hidden="true"><use xlink:href="#icon-tupian1"></use></svg></a><a class="sun_moon faa-parent animated-hover" onclick="switchNightMode()" title="浅色和深色模式转换" id="nightmode-button"><svg class="faa-tada" style="height:25px;width:25px;fill:currentColor;position:relative;top:7px" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon">       </use></svg></a><div id="toggle-menu"><a><i class="fas fa-bars fa-fw"></i></a></div></div></div></nav><div id="post-info"><h1 class="post-title">《操作系统》课程笔记</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="fa-fw post-meta-icon fas fa-history"></i><span class="post-meta-label">更新于</span><time datetime="2025-07-18T11:17:56.833Z" title="更新于 2025-07-18 19:17:56">2025-07-18</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:18px;height:18px;position:relative;top:5px"><use xlink:href="#icon-biaoqian"></use></svg><a class="post-meta-categories" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:8px"><use xlink:href="#icon-charuword"></use></svg><span class="post-meta-label">字数总计:</span><span class="word-count">1.1w</span><span class="post-meta-separator">|</span><svg class="meta_icon post-meta-icon" style="width:20px;height:20px;position:relative;top:5px"><use xlink:href="#icon-shizhong"></use></svg><span class="post-meta-label">阅读时长:</span><span>38分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="《操作系统》课程笔记"><svg class="meta_icon post-meta-icon" style="width:25px;height:25px;position:relative;top:5px"><use xlink:href="#icon-eye"></use></svg><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div><section class="main-hero-waves-area waves-area"><svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto"><defs><path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path></defs><g class="parallax"><use href="#gentle-wave" x="48" y="0"></use><use href="#gentle-wave" x="48" y="3"></use><use href="#gentle-wave" x="48" y="5"></use><use href="#gentle-wave" x="48" y="7"></use></g></svg></section></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="一、导论">一、导论</h2>
+<h3 id="1-计算机系统的组成部分">1. 计算机系统的组成部分</h3>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Posts/Course/operating_system/image.png" alt="alt text"></p>
+<h3 id="2-操作系统的概念">2. 操作系统的概念</h3>
+<p>操作系统(OS)也称内核(Kernel)，是一直运行在计算机上的程序。</p>
+<p>四大特征：并发、共享、虚拟、异步</p>
+<p>作用(系统视角)：</p>
+<ul>
+<li>资源分配器：为各用户和进程分配资源，提高资源利用率</li>
+<li>控制程序：控制各个进程的执行，确保系统稳定运行</li>
+</ul>
+<p>功能：</p>
+<ol>
+<li>进程管理：创建、删除、挂起、重启进程；提供进程同步机制、进程通信机制、死锁处理机制</li>
+<li>内存管理：记录内存分配情况；决定哪些进程可以进入内存；提供内存分配和回收机制</li>
+<li>存储管理</li>
+</ol>
+<h3 id="3-存储层次">3. 存储层次</h3>
+<p>寄存器(Register)、<strong>高速缓存(Cache)、内存(Memory)</strong>、磁盘(Disk)、硬盘、光盘、磁带</p>
+<ul>
+<li>内存：CPU可直接访问的唯一大容量存储区域</li>
+<li>Cache：CPU-内存存储层次</li>
+</ul>
+<p>属性：容量、速度、价格、易失性</p>
+<h3 id="4-多道程序设计">4. 多道程序设计</h3>
+<p>多道程序设计(Multiprogramming)是操作系统<strong>最重要的特点</strong>，通过组织作业使CPU总有一个作业可以执行。</p>
+<p>在内存中同时存放多个程序，使得CPU可以在一个程序等待I/O操作时，切换到另一个程序执行，从而提高CPU的利用率。</p>
+<h3 id="5-双重模式和特权指令">5. 双重模式和特权指令</h3>
+<p>双重模式：</p>
+<p>为了区分操作系统代码和用户代码执行，至少需要两种模式：<strong>内核模式</strong>（又称管理模式、系统模式、特权模式）和<strong>用户模式</strong>，通过模式位（0/1）来区分。</p>
+<p>当应用程序需要操作系统的服务时，<strong>必须</strong>从用户模式切换到内核模式。</p>
+<p>特权指令(Privileged Instructions)：</p>
+<p>只有在内核模式下才能执行的指令。</p>
+<p>特权指令：切换到用户模式、I/O控制相关、访问特殊寄存器的指令、定时器管理、中断管理、内存管理（如改变内存分配图）、设置时钟日期等</p>
+<p>易混淆的非特权指令：</p>
+<ul>
+<li>访管指令：由用户程序发起的一种特殊指令，用于请求操作系统执行某些需要特殊权限才能访问的操作，会从内核模式切换到内核模式，将控制权交给操作系统内核执行相应操作，然后再返回用户模式</li>
+<li>主机和磁盘间通过DMA传送数据的指令</li>
+<li>改变磁盘空间分配图（区别于改变内存分配图）</li>
+<li>写程序计数器PC、寄存器清0、取指令、取操作数、写内存</li>
+</ul>
+<h3 id="6-定时器">6. 定时器</h3>
+<p>定时器(Timer)确保操作系统维持对CPU的控制，防止用户程序：</p>
+<ol>
+<li>陷入死循环</li>
+<li>不调用系统服务，但不将控制返还给操作系统</li>
+</ol>
+<p>操作系统在将控制权交给用户之前，应确保设置好定时器以便产生中断。</p>
+<h2 id="二、操作系统结构">二、操作系统结构</h2>
+<h3 id="1-操作系统服务">1. 操作系统服务</h3>
+<p>1~6方便用户使用；7~9提高系统效率。</p>
+<ol>
+<li>用户界面(User Interface)：提供用户与操作系统交互的方式。</li>
+<li>程序执行：加载程序到内存并运行，能结束执行（不论是正常还是异常）</li>
+<li>I/O操作：提供对I/O设备的访问和控制</li>
+<li>文件系统操作：创建、删除、读写文件和目录</li>
+<li>通信：提供进程间通信机制，如管道、消息队列、共享内存等
+<ul>
+<li>方式：共享内存、消息交换</li>
+</ul>
+</li>
+<li>错误检测：检测和处理错误，确保系统稳定运行</li>
+<li>资源分配：为各个进程分配CPU时间、内存空间、I/O设备等资源</li>
+<li>记账：记录资源使用类型和数量</li>
+<li>保护与安全：确保系统资源的安全性和完整性，防止未授权访问</li>
+</ol>
+<h3 id="2-命令解释程序">2. 命令解释程序</h3>
+<p>命令解释程序(Command Interpreter)也被称为外壳(Shell)，用于获取并执行用户的下一条指令的程序/</p>
+<ul>
+<li>命令行界面(Command Line Interface, CLI)</li>
+<li>图形用户界面(Graphical User Interface, GUI)</li>
+<li>批处理(Batch)</li>
+</ul>
+<h3 id="3-系统调用类型">3. 系统调用类型</h3>
+<p>系统调用是操作系统提供给应用程序的唯一程序接口</p>
+<p>类型：进程控制;文件管理;设备管理;信息维护;通信。</p>
+<h2 id="三、进程-Process">三、进程(Process)</h2>
+<h3 id="1-进程">1. 进程</h3>
+<p>进程是正在执行的程序的实例，包括：代码段、数据段、堆栈段、堆、进程控制块(PCB)。</p>
+<h4 id="进程控制块-PCB">进程控制块(PCB)</h4>
+<p>进程存在的唯一标识，包含：</p>
+<ul>
+<li>进程状态(State)：新的、运行、等待、就绪、终止</li>
+<li>程序计数器(Program Counter, PC)：指向下一条要执行的指令</li>
+<li>CPU寄存器(Registers)：保存进程执行时的寄存器状态</li>
+<li>CPU调度信息：进程优先级，调度队列指针等</li>
+<li>内存管理信息：页表、段表、基地址等</li>
+<li>记账信息、I/O信息</li>
+</ul>
+<h4 id="上下文切换">上下文切换</h4>
+<p>上下文切换：进程间切换的过程，保存当前进程的状态到PCB1中，并从PCB2中恢复下一个进程的状态。</p>
+<h3 id="2-进程状态与转换">2. 进程状态与转换</h3>
+<ul>
+<li>新的(new)：进程正在创建中</li>
+<li>运行(running)：指令正在执行（一次只能有一个进程可在一个CPU上运行）</li>
+<li>等待(waiting)：进程正在等待某个事件发生（如I/O操作完成、收到信号等）</li>
+<li>就绪(ready)：进程已准备好运行，等待分配处理器</li>
+<li>终止(terminated)：进程已完成执行</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Posts/Course/operating_system/image-1.png" alt="alt text"></p>
+<ul>
+<li>因时间片用完暂停：运行-&gt;就绪</li>
+<li>因I/O操作暂停：运行-&gt;等待</li>
+<li>进程打印结束：等待-&gt;就绪</li>
+</ul>
+<h3 id="3-进程调度">3. 进程调度</h3>
+<p>调度队列：</p>
+<ul>
+<li>作业队列：系统中的所有进程</li>
+<li>就绪队列：处于就绪状态等待运行的进程</li>
+<li>设备队列：等待特定I/O设备的进程</li>
+</ul>
+<p>调度程序：</p>
+<ul>
+<li>短期调度（CPU调度）：从<strong>队列</strong>中选择一个进程并为之分配CPU
+<ul>
+<li>快速执行，频繁发生，通常每隔几毫秒</li>
+</ul>
+</li>
+<li>长期调度（作业调度）：从<strong>磁盘缓冲池</strong>中选择进程并将其加载到内存以便执行
+<ul>
+<li>控制多道程序程度（内存中的进程数）</li>
+<li>选择进程：合理搭配CPU密集型和I/O密集型进程</li>
+</ul>
+</li>
+<li>中期调度：将进程从<strong>内存或CPU竞争</strong>中移出
+<ul>
+<li>降低多道程序程度</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-进程创建-终止">4. 进程创建/终止</h3>
+<p>进程创建：<code>fork()</code>、<code>vfork()</code>、<code>clone()</code>等系统调用</p>
+<ul>
+<li>创建新进程时，父进程的所有资源（代码、数据、堆栈）都被复制到子进程中</li>
+<li>子进程fork()返回值为0，父进程返回子进程的PID</li>
+<li>子进程拥有自己的PCB和独立的地址空间</li>
+</ul>
+<p>进程终止：正常结束<code>exit()</code>；异常结束<code>abort()</code></p>
+<p>级联终止：当父进程终止时，所有子进程也会被终止</p>
+<p>父进程等待：<code>wait()</code>系统调用</p>
+<ul>
+<li>注意：exec()系列函数会用新程序替换当前进程的代码段、数据段和堆栈段，但保留PCB和进程ID，不会创建新进程。</li>
+</ul>
+<h3 id="5-进程协作-通信">5. 进程协作/通信</h3>
+<p>如果一个进程能影响其他进程或被其他进程影响，那么该进程就是<strong>协作</strong>的，否则就是<strong>独立</strong>的。</p>
+<p>协作进程需要一种进程间通信机制（Inter-Process Communication, IPC）来交换信息，有2种基本方式：</p>
+<ul>
+<li>共享内存：多个进程可以访问同一块内存区域
+<ul>
+<li>快，仅在建立共享内存时需要系统调用</li>
+</ul>
+</li>
+<li>消息传递：通过发送和接收消息来交换信息
+<ul>
+<li>交换少量数据时有用，无需避免冲突</li>
+</ul>
+</li>
+</ul>
+<p>生产者-消费者模型：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//生产者</span></span><br><span class="line"><span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">while</span>(((in+<span class="number">1</span>) % N) == out); <span class="comment">//等待缓冲区有空位</span></span><br><span class="line">    buffer[in] = produce_item(); <span class="comment">//生产一个项目</span></span><br><span class="line">    in = (in + <span class="number">1</span>) % N; <span class="comment">//更新输入指针</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 消费者</span></span><br><span class="line"><span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    <span class="keyword">while</span> (in == out); <span class="comment">//等待缓冲区有项目</span></span><br><span class="line">    consume_item(buffer[out]); <span class="comment">//消费一个项目</span></span><br><span class="line">    out = (out + <span class="number">1</span>) % N; <span class="comment">//更新输出指针</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="四、线程-Thread">四、线程(Thread)</h2>
+<h3 id="1-线程">1. 线程</h3>
+<p>线程是CPU处理的基本单位，由：线程ID、程序计数器、寄存器集合和栈组成</p>
+<h3 id="2-线程与进程">2. 线程与进程</h3>
+<p>进程是操作系统分配资源的基本单位，而线程是CPU处理的基本单位</p>
+<p>同一进程 的 不同线程 之间<strong>共享代码段、数据段、文件</strong>等，<strong>私有寄存器和栈</strong>。</p>
+<h3 id="3-多线程的优点">3. 多线程的优点</h3>
+<ol>
+<li>响应度高：即使部分阻塞或执行冗长操作，仍然可以继续执行，增加对用户的响应程度</li>
+<li>资源共享：进程只能通过（共享内存、消息传递）等方式共享资源，而线程默认允许共享内存和资源</li>
+<li>经济：进程创建所需的内存和资源分配高，线程共享资源，创建和切换开销小</li>
+<li>可伸缩性：多线程程序可以更好地利用多核处理器的并行处理能力</li>
+</ol>
+<h3 id="4-用户线程和内核线程">4. 用户线程和内核线程</h3>
+<p>用户线程在内核之上支持，并通过用户级线程库来实现。<br>
+线程库提供对用户线程的创建、调度和管理的支持，而无需内核支持。</p>
+<p>三种基本的用户级线程库：POSIX Pthreads、Win32 Threads、Java Threads。</p>
+<p>内核由操作系统直接支持，内核在其空间内执行内核线程的创建、调度和管理。</p>
+<p>实例：Windows XP/2000、Solaris、Linux等操作系统都支持内核线程。</p>
+<p>多线程模型：用户线程和内核线程的映射关系（1:1、M:1、M:N）</p>
+<h2 id="五、进程调度">五、进程调度</h2>
+<h3 id="1-基本概念">1. 基本概念</h3>
+<h4 id="1-1-CPU-I-O执行周期">1.1 CPU-I/O执行周期</h4>
+<p>进程执行包括周期地交替进行：CPU执行和I/O等待</p>
+<p>短CPU区间出现的频率较高，长CPU区间则很少。<br>
+I/O为主的程序通常短CPU区间很多，而CPU为主的程序可能有少量的长CPU区间。</p>
+<h4 id="1-2-CPU调度程序">1.2 CPU调度程序</h4>
+<p>当CPU变为空闲时，操作系统就必须从就绪队列中选择一个进程来执行。<br>
+进程的选择由短期调度程序（Short-term scheduler,或CPU调度程序）执行。</p>
+<p>当出现下面任何情形之一时，需要CPU调度：</p>
+<ol>
+<li>进程从运行状态转入等待状态（I/O请求）</li>
+<li>进程从运行状态转入就绪状态（出现中断）</li>
+<li>进程从等待状态转入就绪状态（I/O完成）</li>
+<li>进程终止</li>
+</ol>
+<p>如果调度只发生在1,4情形，则称为非抢占式调度；<br>
+如果在2,3情形发生调度，则称为抢占式调度。</p>
+<h4 id="1-3-调度程序-分派程序">1.3 调度程序/分派程序</h4>
+<p>调度程序（Dispatcher，又称分派程序）是一个模块，用来将CPU控制权交给短期调度程序选择的进程，功能包括：</p>
+<ol>
+<li>切换上下文：保存当前进程的状态，并加载新进程的状态</li>
+<li>切换到用户模式</li>
+<li>跳转到用户程序的合适位置，以便重新启动程序</li>
+</ol>
+<p>每次进程切换都需要使用调度程序，速度应尽可能快。</p>
+<p>调度延迟/分派延迟：停止一个进程而启动另一个进程所需的时间。</p>
+<h3 id="2-调度准则">2. 调度准则</h3>
+<ul>
+<li>最大化：CPU利用率、吞吐量</li>
+<li>最小化：
+<ul>
+<li>平均周转时间：从进程提交到进程完成的时间</li>
+<li>平均等待时间：程在就绪队列中等待所花的时间，平均等待时间=平均周转时间-平均执行时间</li>
+<li>平均响应时间：从进程提交到进程第一次开始执行的时间</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-调度算法">3. 调度算法</h3>
+<ul>
+<li>非抢占式：一旦进程开始执行，除非它完成，否则不会被抢占</li>
+<li>抢占式：如果一个新到达的进程满足抢占条件，则抢占当前进程</li>
+</ul>
+<h4 id="3-1-先到先服务（FCFS）">3.1 先到先服务（FCFS）</h4>
+<p>先到先服务（First-Come, First-Served, FCFS）是最简单的调度算法。</p>
+<p>按照进程到达就绪队列的顺序进行调度。</p>
+<p>问题：护航效应：长进程可能会阻塞短进程，导致平均等待时间增加。</p>
+<h4 id="3-2-最短作业优先">3.2 最短作业优先</h4>
+<p>最短作业优先（Shortest Job First, SJF），是最佳的调度算法之一。</p>
+<p>基于进程执行时间的调度算法，选择预计执行时间最短的进程进行调度。</p>
+<p>分为非抢占式（最短作业优先SJF）和抢占式（最短剩余时间调度SRTF）</p>
+<p>SJF算法是最佳的，但是它不能在短期CPU调度的层次上实现，因为没有办法知道下一个CPU请求的长度。</p>
+<p>问题：饥饿现象/无穷阻塞：长进程可能永远得不到执行。</p>
+<h4 id="3-3-优先级调度">3.3 优先级调度</h4>
+<p>优先级调度（Priority Scheduling）为每个进程分配一个优先级，调度时选择优先级最高的进程。</p>
+<p>分为非抢占式和抢占式。</p>
+<p>SJF算法是通用优先级调度算法的一个特例，只不过SJF算法的优先级是通过预测CPU区间的长短来实现的。</p>
+<p>问题：饥饿现象/无穷阻塞</p>
+<p>解决办法：老化：逐渐增大在系统中等待很长时间的进程的优先级。</p>
+<h4 id="3-4-轮转调度（RR）">3.4 轮转调度（RR）</h4>
+<p>轮转调度（Round Robin, RR）是最常用的抢占式调度算法。</p>
+<p>将一个较小的时间单元定义为时间片（Time Quantum），每个进程在时间片内执行。</p>
+<p>如果时间片用完，进程被抢占并放回就绪队列的末尾。</p>
+<p>优点：响应时间小、不会出现护航效应和饥饿现象。</p>
+<p>RR依赖于时间片大小，过大则和FCFS相同，过小则会导致频繁的上下文切换</p>
+<p>注：考试中时间片默认为2s</p>
+<h4 id="3-5-多级队列调度">3.5 多级队列调度</h4>
+<p>将就绪队列划分为多个独立队列，根据进程的某些属性分配到不同队列，每个队列有自己的调度算法。</p>
+<p>队列之间也需要优先级，可以是固定优先级或划分时间片</p>
+<h4 id="3-6-多级反馈队列调度">3.6 多级反馈队列调度</h4>
+<p>根据不同CPU区间特点以区分进程，允许进程在队列之间移动。</p>
+<p>如果进程使用过多的CPU时间，那么它会被移到更低优先级队列，这一方案会将I/O为主和交互式进程留在较高优先级队列。</p>
+<p>在较低优先级队列中等待过长的进程会被转移到较高优先级队列，这种形式的老化能够阻止饥饿的发生。</p>
+<h3 id="4-调度算法计算题">4. 调度算法计算题</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">进程</th>
+<th style="text-align:center">到达时间</th>
+<th style="text-align:center">执行时间</th>
+<th style="text-align:center">优先级</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">P1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">2</td>
+</tr>
+<tr>
+<td style="text-align:center">P2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">5</td>
+</tr>
+<tr>
+<td style="text-align:center">P3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">3</td>
+</tr>
+<tr>
+<td style="text-align:center">P4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">P5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+</tr>
+</tbody>
+</table>
+<h4 id="4-1-FCFS调度">4.1 FCFS调度</h4>
+<p>甘特图：</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">| <span class="type">P1</span> | <span class="type">P2</span> | <span class="type">P3</span> | <span class="type">P4</span> | <span class="type">P5</span> |</span><br><span class="line"><span class="type">0</span>    <span class="number">10</span>   <span class="number">14</span>   <span class="number">23</span>   <span class="number">28</span>   <span class="number">30</span> </span><br></pre></td></tr></table></figure>
+<ul>
+<li>平均等待时间：$(0+(10-1)+(14-2)+(23-3)+(28-4))\div 5 = 13$</li>
+<li>平均周转时间：$(10+(14-1)+(23-2)+(28-3)+(30-4))\div 5 = 19$</li>
+<li>平均响应时间=平均等待时间</li>
+</ul>
+<h4 id="4-2-SJF调度">4.2 SJF调度</h4>
+<p>由于P1先到，所以P1先执行，非抢占式</p>
+<p>甘特图：</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">| <span class="type">P1</span> | <span class="type">P5</span> | <span class="type">P2</span> | <span class="type">P4</span> | <span class="type">P3</span> |</span><br><span class="line"><span class="type">0</span>    <span class="number">10</span>   <span class="number">12</span>   <span class="number">16</span>   <span class="number">21</span>   <span class="number">30</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>平均等待时间：$(0+(12-1)+(21-2)+(16-3)+(10-4))\div 5 = 9.8$</li>
+<li>平均周转时间：$(10+(16-1)+(30-2)+(21-3)+(12-4))\div 5 = 15.8$</li>
+<li>平均响应时间=平均等待时间</li>
+</ul>
+<h4 id="4-3-SRTF调度">4.3 SRTF调度</h4>
+<p>甘特图：</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">| <span class="type">P1</span> | <span class="type">P2</span> | <span class="type">P5</span> | <span class="type">P4</span> | <span class="type">P1</span> | <span class="type">P3</span> |</span><br><span class="line"><span class="type">0</span>    <span class="number">1</span>    <span class="number">5</span>    <span class="number">7</span>    <span class="number">12</span>   <span class="number">21</span>   <span class="number">30</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>平均等待时间：$((0+(12-1))+(1-1)+(21-2)+(7-3)+(5-4))\div 5 = 7$</li>
+<li>平均周转时间：$(21+(5-1)+(30-2)+(12-3)+(7-4))\div 5 = 13$</li>
+<li>平均响应时间：$(0+(1-1)+(21-2)+(7-3)+(5-4))\div 5 = 4.8$</li>
+</ul>
+<h4 id="4-4-优先级调度（非抢占式）">4.4 优先级调度（非抢占式）</h4>
+<p>由于P1先到，所以P1先执行，非抢占式</p>
+<p>甘特图：</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">| <span class="type">P1</span> | <span class="type">P4</span> | <span class="type">P3</span> | <span class="type">P5</span> | <span class="type">P2</span> |</span><br><span class="line"><span class="type">0</span>    <span class="number">10</span>   <span class="number">15</span>   <span class="number">24</span>   <span class="number">26</span>   <span class="number">30</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>平均等待时间：$(0+(24-1)+(15-2)+(10-3)+(26-4))\div 5 = 13$</li>
+<li>平均周转时间：$(10+(30-1)+(26-2)+(15-3)+(24-4))\div 5 = 19$</li>
+<li>平均响应时间=平均等待时间</li>
+</ul>
+<h4 id="4-5-优先级调度（抢占式）">4.5 优先级调度（抢占式）</h4>
+<p>甘特图：</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">| <span class="type">P1</span> | <span class="type">P4</span> | <span class="type">P1</span> | <span class="type">P3</span> | <span class="type">P5</span> | <span class="type">P2</span> |</span><br><span class="line"><span class="type">0</span>    <span class="number">3</span>    <span class="number">8</span>    <span class="number">15</span>   <span class="number">24</span>   <span class="number">26</span>   <span class="number">30</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>平均等待时间：$((0+(8-3))+(26-1)+(15-2)+(4-3)+(24-4))\div 5 = 12.6$</li>
+<li>平均周转时间：$(15+(30-1)+(24-2)+(8-3)+(26-4))\div 5 = 18.6$</li>
+<li>平均响应时间：$(0+(26-1)+(15-2)+(4-3)+(24-4))\div 5 = 11.6$</li>
+</ul>
+<h4 id="4-6-轮转调度（RR）">4.6 轮转调度（RR）</h4>
+<p>假设时间片为2s，进程到达入队 优先于 时间片到入队</p>
+<p>运行流程</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">时间</th>
+<th style="text-align:center">CPU执行</th>
+<th style="text-align:center">就绪队列</th>
+<th style="text-align:center">备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">P1(0/10)</td>
+<td style="text-align:center">[]</td>
+<td style="text-align:center">P1到达，P1执行</td>
+</tr>
+<tr>
+<td style="text-align:center">1</td>
+<td style="text-align:center">P1(1/10)</td>
+<td style="text-align:center">[P2(0/4) ]</td>
+<td style="text-align:center">P2到达，P1继续执行</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">P2(0/4)</td>
+<td style="text-align:center">[P3(0/9), P1(2/10)]</td>
+<td style="text-align:center">P3到达，P1时间片到，P2执行</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td style="text-align:center">P2(1/4)</td>
+<td style="text-align:center">[P3(0/9), P1(2/10), P4(0/5)]</td>
+<td style="text-align:center">P4到达，P2继续执行</td>
+</tr>
+<tr>
+<td style="text-align:center">4</td>
+<td style="text-align:center">P3(0/9)</td>
+<td style="text-align:center">[P1(2/10), P4(0/5), P5(0/2), P2(2/4)]</td>
+<td style="text-align:center">P5到达，P2时间片到，P3执行</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td style="text-align:center">P1(2/10)</td>
+<td style="text-align:center">[P4(0/5), P5(0/2), P2(2/4), P3(2/9)]</td>
+<td style="text-align:center">P3时间片到，P1执行</td>
+</tr>
+<tr>
+<td style="text-align:center">8</td>
+<td style="text-align:center">P4(0/5)</td>
+<td style="text-align:center">[P5(0/2), P2(2/4), P3(2/9), P1(4/10)]</td>
+<td style="text-align:center">P1时间片到，P4执行</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">P5(0/2)</td>
+<td style="text-align:center">[P2(2/4), P3(2/9), P1(4/10), P4(2/5)]</td>
+<td style="text-align:center">P4时间片到，P5执行</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td style="text-align:center">P2(2/4)</td>
+<td style="text-align:center">[P3(2/9), P1(4/10), P4(2/5)]</td>
+<td style="text-align:center">P5完成，P2执行</td>
+</tr>
+<tr>
+<td style="text-align:center">14</td>
+<td style="text-align:center">P3(2/9)</td>
+<td style="text-align:center">[P1(4/10), P4(2/5)]</td>
+<td style="text-align:center">P2完成，P3执行</td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td style="text-align:center">P1(4/10)</td>
+<td style="text-align:center">[P4(2/5), P3(4/9)]</td>
+<td style="text-align:center">P3时间片到，P1执行</td>
+</tr>
+<tr>
+<td style="text-align:center">18</td>
+<td style="text-align:center">P4(2/5)</td>
+<td style="text-align:center">[P3(4/9), P1(6/10)]</td>
+<td style="text-align:center">P1时间片到，P4执行</td>
+</tr>
+<tr>
+<td style="text-align:center">20</td>
+<td style="text-align:center">P3(4/9)</td>
+<td style="text-align:center">[P1(6/10), P4(4/5)]</td>
+<td style="text-align:center">P4时间片到，P3执行</td>
+</tr>
+<tr>
+<td style="text-align:center">22</td>
+<td style="text-align:center">P1(6/10)</td>
+<td style="text-align:center">[P4(4/5), P3(6/9)]</td>
+<td style="text-align:center">P3时间片到，P1执行</td>
+</tr>
+<tr>
+<td style="text-align:center">24</td>
+<td style="text-align:center">P4(4/5)</td>
+<td style="text-align:center">[P3(6/9), P1(8/10)]</td>
+<td style="text-align:center">P1时间片到，P4执行</td>
+</tr>
+<tr>
+<td style="text-align:center">25</td>
+<td style="text-align:center">P3(6/9)</td>
+<td style="text-align:center">[P1(8/10) ]</td>
+<td style="text-align:center">P4完成，P3执行</td>
+</tr>
+<tr>
+<td style="text-align:center">27</td>
+<td style="text-align:center">P1(8/10)</td>
+<td style="text-align:center">[P3(8/9) ]</td>
+<td style="text-align:center">P3时间片到，P1执行</td>
+</tr>
+<tr>
+<td style="text-align:center">29</td>
+<td style="text-align:center">P3(8/9)</td>
+<td style="text-align:center">[]</td>
+<td style="text-align:center">P1完成，P3执行</td>
+</tr>
+<tr>
+<td style="text-align:center">30</td>
+<td style="text-align:center">P3(9/9)</td>
+<td style="text-align:center">[]</td>
+<td style="text-align:center">P3完成，所有进程执行完毕</td>
+</tr>
+</tbody>
+</table>
+<p>甘特图：</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">| <span class="type">P1</span> | <span class="type">P2</span> | <span class="type">P3</span> | <span class="type">P1</span> | <span class="type">P4</span> | <span class="type">P5</span> | <span class="type">P2</span> | <span class="type">P3</span> | <span class="type">P1</span> | <span class="type">P4</span> | <span class="type">P3</span> | <span class="type">P1</span> | <span class="type">P4</span> | <span class="type">P3</span> | <span class="type">P1</span> | <span class="type">P3</span> |</span><br><span class="line"><span class="type">0</span>    <span class="number">2</span>    <span class="number">4</span>    <span class="number">6</span>    <span class="number">8</span>    <span class="number">10</span>   <span class="number">12</span>   <span class="number">14</span>   <span class="number">16</span>   <span class="number">18</span>   <span class="number">20</span>   <span class="number">22</span>   <span class="number">24</span>   <span class="number">25</span>   <span class="number">27</span>   <span class="number">29</span>   <span class="number">30</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>平均等待时间=周转时间-执行时间=$((29-0-10)+(14-1-4)+(30-2-9)+(23-3-5)+(25-4-2))/5=14$</li>
+<li>平均周转时间=$(29+(14-1)+(30-2)+(23-3)+(25-4))/5=20$</li>
+<li>平均响应时间=$(0+(2-1)+(4-2)+(8-3)+(10-4))/5=2.8$</li>
+</ul>
+<h2 id="六、进程同步">六、进程同步</h2>
+<h3 id="1-竞争条件">1. 竞争条件</h3>
+<p>多个进程并发访问和操作同一数据时，执行结果和访问发生的特定顺序有关，这种情况称为竞争条件。</p>
+<p>例如：赋值语句和自增语句</p>
+<h3 id="2-临界区问题">2. 临界区问题</h3>
+<p>临界区(Critical Section)：并发过程中可能访问/修改共享数据的代码段。</p>
+<p>临界区问题：确保在任何时刻，只有一个进程可以进入临界区。</p>
+<p>解决临界区问题必须满足的3个条件：</p>
+<ol>
+<li>互斥：进程在临界区，其他进程不能进入临界区</li>
+<li>前进：没有进程在临界区，允许其他进程进入临界区，不能无限等待</li>
+<li>有限等待：从一个进程作出进入临界区的请求到该进程进入临界区之间，其他进程进入临界区的请求个数有限</li>
+</ol>
+<p>忙则等待；空则让进；等则有限；等则让权</p>
+<h3 id="3-Peterson算法">3. Peterson算法</h3>
+<p>适用于两个进程的临界区问题。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> flag[<span class="number">2</span>] = &#123;<span class="number">0</span>, <span class="number">0</span>&#125;; <span class="comment">// 表示哪个进程想要进入临界区,默认为false</span></span><br><span class="line"><span class="type">int</span> turn; <span class="comment">// 表示当前轮到哪个进程进入临界区</span></span><br><span class="line"><span class="comment">// P0</span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    flag[<span class="number">0</span>] = <span class="number">1</span>; <span class="comment">// 表示进程0想进入临界区</span></span><br><span class="line">    turn = <span class="number">1</span>; <span class="comment">// 让进程1先进入临界区（等则让权）</span></span><br><span class="line">    <span class="keyword">while</span>(flag[<span class="number">1</span>] &amp;&amp; turn == <span class="number">1</span>); <span class="comment">// 等待进程1退出临界区</span></span><br><span class="line">    <span class="comment">// 临界区代码</span></span><br><span class="line">    flag[<span class="number">0</span>] = <span class="number">0</span>; <span class="comment">// 退出临界区</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// P1</span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    flag[<span class="number">1</span>] = <span class="number">1</span>; <span class="comment">// 表示进程1想进入临界区</span></span><br><span class="line">    turn = <span class="number">0</span>; <span class="comment">// 让进程0先进入临界区</span></span><br><span class="line">    <span class="keyword">while</span>(flag[<span class="number">0</span>] &amp;&amp; turn == <span class="number">0</span>); <span class="comment">// 等待进程0退出临界区</span></span><br><span class="line">    <span class="comment">// 临界区代码</span></span><br><span class="line">    flag[<span class="number">1</span>] = <span class="number">0</span>; <span class="comment">// 退出临界区</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-硬件同步">4. 硬件同步</h3>
+<p>许多系统为解决临界区问题提供了硬件支持</p>
+<ol>
+<li>修改共享变量禁止中断
+<ul>
+<li>正在运行的指令不被其他指令抢占CPU</li>
+<li>适用于单处理器环境，非抢占内核（不允许内核模式进程被抢占，同时刻只有一个内核模式进程）</li>
+</ul>
+</li>
+<li>使用原子操作：不能被中断的原子指令</li>
+</ol>
+<h3 id="5-信号量-Semaphore">5. 信号量(Semaphore)</h3>
+<p>信号量是一种不需要忙等的进程同步机制（空则让进），本质是一个整数变量。</p>
+<p>除初始化外，只能通过两个原子操作来修改：P（wait）和V（signal）。</p>
+<ul>
+<li>P操作：如果信号量值大于0，则将其减1并继续执行；如果信号量值为0，则阻塞进程，直到信号量值大于0。</li>
+<li>V操作：将信号量值加1，如果有进程在等待，则唤醒一个等待的进程。</li>
+</ul>
+<p>信号量分为两种类型：</p>
+<ol>
+<li>二进制信号量（Binary Semaphore）：值只能为0或1，通常用于互斥访问临界区，又被称为互斥锁（Mutex）。</li>
+<li>计数信号量（Counting Semaphore）：值可以为任意非负整数，通常用于控制对有限资源的访问。</li>
+</ol>
+<p>实现方案：忙等实现（S&gt;=0）和阻塞实现（S可以为负数，绝对值表示等待的进程数）。</p>
+<p>忙等实现-自旋锁(Spinlock)：</p>
+<ul>
+<li>当一个进程位于其临界区时，其它任何试图进入临界区的进程都必须在其进入区的代码中连续循环</li>
+<li>不用阻塞进程、不必上下文切换</li>
+<li>临界区代码短时效率高</li>
+<li>适合多处理器环境（单处理器可以通过简单的禁止中断实现wait和signal的原子执行）</li>
+<li>单处理器系统忙等时不会释放CPU，也没有其他进程能够运行以获得CPU控制权</li>
+</ul>
+<h3 id="6-死锁和饥饿">6. 死锁和饥饿</h3>
+<p>死锁（Deadlock）：两个或多个进程互相等待对方释放资源，导致所有进程都无法继续执行。</p>
+<p>饥饿（Starvation）：进程无限等待信号量。对信号量有关的链表LIFO顺序增删进程可能导致。</p>
+<h3 id="7-经典同步问题">7. 经典同步问题</h3>
+<h4 id="7-1-存在先后关系的简单同步问题">7.1 存在先后关系的简单同步问题</h4>
+<p>将不同进程间的代码块的执行顺序视为DAG，进行拓扑排序：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Posts/Course/operating_system/image-2.png" alt="alt text"></p>
+<p>记信号量<code>Sij</code>表示进程<code>j</code>等待进程<code>i</code>的信号量（进程<code>i</code>执行完后才能执行进程<code>j</code>）</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// P1</span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    wait(S21);</span><br><span class="line">    <span class="comment">// 临界区1代码</span></span><br><span class="line">    signal(S15);</span><br><span class="line"></span><br><span class="line">    wait(S54);</span><br><span class="line">    <span class="comment">// 临界区4代码</span></span><br><span class="line">    signal(S47);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// P2</span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    <span class="comment">// 代码块2</span></span><br><span class="line">    signal(S21);</span><br><span class="line">    </span><br><span class="line">    wait(S15);</span><br><span class="line">    wait(S35);</span><br><span class="line">    <span class="comment">// 临界区5代码</span></span><br><span class="line">    signal(S54);</span><br><span class="line">    signal(S56);</span><br><span class="line"></span><br><span class="line">    wait(S47);</span><br><span class="line">    wait(S67);</span><br><span class="line">    <span class="comment">// 代码块7</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// P3略</span></span><br></pre></td></tr></table></figure>
+<h4 id="7-2-生产者-消费者问题">7.2 生产者-消费者问题</h4>
+<p>生产者-消费者问题是经典的进程同步问题，涉及到两个进程：生产者和消费者。</p>
+<p>生产者进程生成数据并将其放入缓冲区，消费者进程从缓冲区中取出数据进行处理。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 生产者</span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    wait(empty); <span class="comment">// 等待缓冲区有空位</span></span><br><span class="line"></span><br><span class="line">    wait(mutex); <span class="comment">// 进入临界区</span></span><br><span class="line">    buffer[in] = produce_item(); <span class="comment">// 生产一个项目</span></span><br><span class="line">    in = (in + <span class="number">1</span>) % N; <span class="comment">// 更新输入指针</span></span><br><span class="line">    signal(mutex); <span class="comment">// 离开临界区</span></span><br><span class="line"></span><br><span class="line">    signal(full); <span class="comment">// 增加缓冲区满的计数</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 消费者</span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    wait(full); <span class="comment">// 等待缓冲区有项目</span></span><br><span class="line"></span><br><span class="line">    wait(mutex); <span class="comment">// 进入临界区</span></span><br><span class="line">    consume_item(buffer[out]); <span class="comment">// 消费一个项目</span></span><br><span class="line">    out = (out + <span class="number">1</span>) % N; <span class="comment">// 更新输出指针</span></span><br><span class="line">    signal(mutex); <span class="comment">// 离开临界区</span></span><br><span class="line"></span><br><span class="line">    signal(empty); <span class="comment">// 增加缓冲区空的计数</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="7-3-读者-写者问题">7.3 读者-写者问题</h4>
+<p>读者-写者问题是经典的进程同步问题，涉及到多个读者和一个写者。</p>
+<ul>
+<li>读者：并发读取数据，不修改数据</li>
+<li>写者：独占访问数据，修改数据</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 读者</span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    wait(read_mutex); <span class="comment">// 进入读者临界区</span></span><br><span class="line">    read_count++; <span class="comment">// 增加读者计数</span></span><br><span class="line">    <span class="keyword">if</span> (read_count == <span class="number">1</span>) wait(write_mutex); <span class="comment">// 第一个读者阻塞写者</span></span><br><span class="line">    signal(read_mutex); <span class="comment">// 离开读者临界区</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 读取数据</span></span><br><span class="line">    read_data();</span><br><span class="line"></span><br><span class="line">    wait(read_mutex); <span class="comment">// 进入读者临界区</span></span><br><span class="line">    read_count--; <span class="comment">// 减少读者计数</span></span><br><span class="line">    <span class="keyword">if</span> (read_count == <span class="number">0</span>) signal(write_mutex); <span class="comment">// 最后一个读者释放写者</span></span><br><span class="line">    signal(read_mutex); <span class="comment">// 离开读者临界区</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 写者</span></span><br><span class="line"><span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">    wait(write_mutex); <span class="comment">// 进入写者临界区</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 写入数据</span></span><br><span class="line">    write_data();</span><br><span class="line"></span><br><span class="line">    signal(write_mutex); <span class="comment">// 离开写者临界区</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>进一步的：</p>
+<ul>
+<li>读者优先：直到无读者等待，写者才能进入临界区</li>
+<li>写者优先：有写者等待时，读者不能进入临界区</li>
+</ul>
+<h4 id="7-4-哲学家就餐问题">7.4 哲学家就餐问题</h4>
+<p>哲学家就餐问题是经典的进程同步问题，涉及到5个哲学家和5个叉子。</p>
+<p>如果所有哲学家都拿起左边的叉子，那么就会发生死锁。</p>
+<p>解决思路：</p>
+<ol>
+<li>当4个叉子被拿起时，没有叉子的哲学家不能拿起叉子</li>
+<li>任一哲学家拿起两个叉子前时，其他哲学家不能拿起叉子</li>
+<li>…</li>
+</ol>
+<h2 id="七、死锁-Deadlock">七、死锁(Deadlock)</h2>
+<h3 id="1-死锁的4个必要条件">1. 死锁的4个必要条件</h3>
+<ol>
+<li>互斥：至少有一个资源不能共享</li>
+<li>占有并等待：一个进程至少持有一个资源，并等待其他资源（被其他进程持有）</li>
+<li>非抢占：资源不能被抢占，只能由持有该资源的进程释放</li>
+<li>循环等待：存在一个进程等待环，其中每个进程都在等待下一个进程持有的资源</li>
+</ol>
+<p>必须同时满足这四个条件才能发生死锁。</p>
+<h4 id="例题">例题</h4>
+<p>假设有4个相同类型的资源被3个进程共享，每个进程最多需要2个资源，试证明这个系统不会死锁。</p>
+<p>在任何情况下，即使所有进程都持有最大“不完全”资源（每个进程1个资源），系统中也总会剩下至少1个资源。这个剩余的资源足以让其中一个进程获得并完成任务，然后释放其占有的资源。</p>
+<p>随着资源的释放，其他被阻塞的进程也能依次获得资源并完成任务。</p>
+<p>因此，系统永远不会进入所有进程都无法继续执行的死锁状态。</p>
+<h3 id="2-资源分配图">2. 资源分配图</h3>
+<p>方形R表示资源，内部点个数表示资源数量；圆形P表示进程。</p>
+<ul>
+<li>P-&gt;R：表示进程P请求资源R</li>
+<li>R-&gt;P：表示资源R被进程P占用</li>
+</ul>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Posts/Course/operating_system/image-3.png" alt="alt text"></p>
+<p>死锁判断：</p>
+<ol>
+<li>根据资源R的出边，划掉已被分配的资源</li>
+<li>找到一个进程P，其所有请求（出边）都可被满足</li>
+<li>释放进程P占用的资源R，并将其边从图中删除</li>
+<li>重复步骤2和3，直到没有进程满足条件或所有进程都被释放</li>
+</ol>
+<h3 id="3-死锁的预防">3. 死锁的预防</h3>
+<p>否定死锁的四个必要条件之一：</p>
+<ol>
+<li>互斥：非共享资源必须要有互斥条件，不能否定</li>
+<li>占有并等待：降低资源利用率，并且可能导致饥饿
+<ol>
+<li>执行前必须申请到所有资源</li>
+<li>申请新资源前必须释放所有已占有的资源</li>
+</ol>
+</li>
+<li>非抢占：使用范围有限，只能用于可保存和恢复的资源（寄存器、内存等）
+<ol>
+<li>如果一个进程申请的资源不能立刻分配，已分配资源可被抢占</li>
+</ol>
+</li>
+<li>循环等待：对所有资源的类型进行完全排序，要求每个进程按递增顺序申请资源</li>
+</ol>
+<h3 id="4-死锁的避免">4. 死锁的避免</h3>
+<p>安全状态：存在一种顺序为所有进程分配资源，能够避免死锁</p>
+<h4 id="4-1-资源分配图算法">4.1 资源分配图算法</h4>
+<p>[资源分配图]算法(#2-资源分配图)适用于每种资源类型只有一个实例的情况，核心思想是检测图中是否存在环路。</p>
+<p>算法机制：</p>
+<ol>
+<li>除申请边和分配边外，引入一种新类型的边，称为需求边。
+<ul>
+<li>需求边Pi-&gt;Rj 表示进程Pi可能在将来某个时候申请资源Rj。</li>
+<li>需求边类似于申请边，但用虚线表示。</li>
+</ul>
+</li>
+<li>当进程申请资源时，需求边变成申请边。</li>
+<li>当资源分配给进程时，申请边变成分配边。</li>
+<li>当进程释放资源时，分配边变成需求边。</li>
+<li>系统必须事先要求资源，即当进程Pi开始执行时，所有需求边必须处于资源分配图。</li>
+</ol>
+<p>假设进程Pi申请资源Rj，只有在将申请边Pi-&gt;Rj变成分配边Rj-&gt;Pi，且不会导致资源分配图形成环时才允许申请。</p>
+<h4 id="4-2-银行家算法">4.2 银行家算法</h4>
+<p>适用于每种资源类型有多个实例的情况。</p>
+<p>当进程申请一组资源时，系统必须确定分配这些资源后系统是否仍处于安全状态。<br>
+如果是，就分配资源，否则，进程必须等待直到其他进程释放足够的资源。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 银行家算法</span></span><br><span class="line"><span class="type">int</span> n,m; <span class="comment">// n为进程数，m为资源种类数</span></span><br><span class="line"><span class="type">int</span> available[m]; <span class="comment">// 可用资源向量</span></span><br><span class="line"><span class="type">int</span> max[n][m]; <span class="comment">// 最大需求矩阵</span></span><br><span class="line"><span class="type">int</span> allocation[n][m]; <span class="comment">// 当前分配矩阵</span></span><br><span class="line"><span class="type">int</span> need[n][m]; <span class="comment">// 需求矩阵，need[i][j] = max[i][j] - allocation[i][j]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 安全性检查 </span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">is_safe</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">auto</span> work = available; <span class="comment">// 可用资源向量</span></span><br><span class="line">    <span class="keyword">auto</span> finish = <span class="built_in">vector</span>&lt;<span class="type">bool</span>&gt;(n, <span class="literal">false</span>); <span class="comment">// 进程完成标志</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i)</span><br><span class="line">        <span class="comment">// 进程i未完成且需求小于等于可用资源</span></span><br><span class="line">        <span class="keyword">if</span>(finish[i]==<span class="literal">false</span> &amp;&amp; need[i] &lt;= work) &#123;</span><br><span class="line">            work += allocation[i]; <span class="comment">// 完成，释放资源</span></span><br><span class="line">            finish[i] = <span class="literal">true</span>; <span class="comment">// 标记进程i完成</span></span><br><span class="line">            i = <span class="number">-1</span>; <span class="comment">// 重置i，重新检查所有进程</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="comment">// 检查是否所有进程都完成</span></span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span>(finish[i] == <span class="literal">false</span>) <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">// 存在未完成进程，系统不安全</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>; <span class="comment">// 所有进程都完成，系统安全</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 资源请求算法</span></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">request_resources</span><span class="params">(<span class="type">int</span> i, vector&lt;<span class="type">int</span>&gt; request)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (!(request&lt;= need[i])) <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">// 请求超过需求</span></span><br><span class="line">    <span class="keyword">if</span> (!(request &lt;= available)) <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">// 请求超过可用资源</span></span><br><span class="line">    <span class="comment">// 假设分配资源</span></span><br><span class="line">    available -= request; <span class="comment">// 更新可用资源</span></span><br><span class="line">    allocation[i] += request; <span class="comment">// 更新分配矩阵</span></span><br><span class="line">    need[i] -= request; <span class="comment">// 更新需求矩阵</span></span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">is_safe</span>()) &#123; <span class="comment">// 检查是否安全</span></span><br><span class="line">        <span class="comment">// 如果不安全，回滚分配</span></span><br><span class="line">        available += request; <span class="comment">// 恢复可用资源</span></span><br><span class="line">        allocation[i] -= request; <span class="comment">// 恢复分配矩阵</span></span><br><span class="line">        need[i] += request; <span class="comment">// 恢复需求矩阵</span></span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>; <span class="comment">// 请求失败</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="5-死锁的检测和恢复">5. 死锁的检测和恢复</h3>
+<p>死锁检测算法：检测系统状态，确定系统是否出现了死锁。（原理类似于死锁避免）</p>
+<p>恢复机制：终止（代价大）、资源抢占</p>
+<h2 id="八、主存管理">八、主存管理</h2>
+<h3 id="1-内存管理单元MMU">1. 内存管理单元MMU</h3>
+<p>在运行时完成逻辑地址到物理地址的转换的硬件被称为内存管理单元（Memory Management Unit, MMU）。</p>
+<p>三种实现方法：连续内存分配、分页和分段</p>
+<h3 id="2-连续内存分配">2. 连续内存分配</h3>
+<p>内存保护：通过基址寄存器和界限寄存器来实现。</p>
+<ul>
+<li>基址寄存器：存储逻辑地址空间的起始地址</li>
+<li>界限寄存器：存储逻辑地址空间的大小</li>
+</ul>
+<p>多分区方法：固定分区、<strong>可变分区</strong></p>
+<p>孔：可用的内存块。<br>
+一开始整个内存是一个孔，随着进程的进入和中止，整个内存将遍布着许多大小不同的孔。</p>
+<p>动态存储分配问题：根据一组空闲的孔和一个请求的大小，选择一个孔来满足请求。</p>
+<p>三种分配策略：</p>
+<ol>
+<li>首次适应（First Fit）：从头开始搜索，找到第一个足够大的孔分配给进程。</li>
+<li>最佳适应（Best Fit）：搜索所有孔，找到最小的足够大的孔分配给进程。</li>
+<li>最差适应（Worst Fit）：搜索所有孔，找到最大的孔分配给进程。</li>
+</ol>
+<ul>
+<li>首次适应和最佳适应在执行时间和利用空间方面都好于最差适应。</li>
+<li>首次适应比最佳适应要快</li>
+</ul>
+<p>碎片：因太小而无法分配给任何进程的孔。</p>
+<ul>
+<li>外部碎片：由于分配和释放内存块后，剩余的内存块太小而无法满足新的请求，三种分配策略都可能导致外部碎片。</li>
+<li>内部碎片：固定分区（分页）方法的问题，进程分配到的内存块比实际需要的要大，导致未使用的内存空间。</li>
+</ul>
+<p>解决外部碎片的方法：</p>
+<ol>
+<li>紧缩：移动内存内容，将所有空闲空间合并成一整块
+<ul>
+<li>缺点：有条件限制（要求重定位是动态的）、开销大</li>
+</ul>
+</li>
+<li>允许物理地址空间为非连续的（分页和分段）</li>
+</ol>
+<h3 id="3-分页（Paging）">3. 分页（Paging）</h3>
+<h4 id="3-1-基本方法">3.1 基本方法</h4>
+<p>物理地址分为固定大小的块，称为<strong>帧</strong>(Frame)，逻辑地址分为同样大小的块，称为<strong>页</strong>(Page)。</p>
+<p>内存的分配信息保存在称为<strong>帧表</strong>(frame table)的数据结构中</p>
+<p>如果一个进程需要x页，则在内存在寻找x个空闲帧，如果有，则分配。</p>
+<p>为进程分配内存时建立一个<strong>页表</strong>，用于将逻辑地址转换成物理地址，页表的指针与其他信息一起存入进程控制块。</p>
+<p>页表基寄存器(PTBR)指向页表，切换页表只需改变PTBR的值即可。</p>
+<p>页表长度寄存器(PTLB)表示页表的长度。</p>
+<p>采用分页技术不会产生外部碎片，但是会有<strong>内部碎片</strong>。</p>
+<p>分页的优点之一是可以共享共同代码：多个进程之间可以共享同一只读代码（重入代码）段的拷贝；私有独占代码和数据</p>
+<p>记块大小$2^n$，物理内存大小为$2^k$，进程逻辑地址大小为$2^m$。</p>
+<p>帧数：$2^{k-n}$，页数：$2^{m-n}$</p>
+<p>逻辑地址高m-n位为§页表索引，低n位(d)为页偏移</p>
+<p>假设每页4B：</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Posts/Course/operating_system/image-5.png" alt="alt text"></p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Posts/Course/operating_system/image-4.png" alt="alt text"></p>
+<h4 id="3-2-转换表缓冲TLB">3.2 转换表缓冲TLB</h4>
+<p>页表存储在内存中，每访问一个字节，需要两次访问内存（查找页表、找到需要的信息），针对这一问题的标准解决方案是关联内存(TLB)。</p>
+<p>当关联内存根据给定值（页号）查找时，它会同时与所有键进行比较，如果找到条目，就得到相应的值域（帧号）</p>
+<p>相当于页表的一个缓存，TLB的大小通常很小（几十个条目），因此需要使用替换算法</p>
+<p>有效内存访问时间(Effective Memory Access Time, EMAT)：</p>
+<p>$$<br>
+EMAT = (T+\epsilon)\alpha + (2T+\epsilon)(1-\alpha)<br>
+$$</p>
+<ul>
+<li>T：访问一次内存的时间</li>
+<li>ε：访问一次TLB的时间</li>
+<li>α：TLB命中率</li>
+<li>第一项：TLB命中，访问一次内存</li>
+<li>第二项：TLB未命中，访问两次内存</li>
+</ul>
+<h4 id="3-3-页表的结构">3.3 页表的结构</h4>
+<ol>
+<li>层次化页表：将页表分为多个层次，每个层次的页表只包含一部分页表项，减少内存占用。</li>
+<li>哈希页表：使用哈希函数将页号映射到页表项，减少内存占用</li>
+<li>反向页表：每个物理帧对应一个页表项，记录哪个进程的哪个页映射到该帧</li>
+</ol>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Posts/Course/operating_system/image-6.png" alt="alt text"></p>
+<h4 id="3-4-例题1">3.4 例题1</h4>
+<p>页面大小为4KB，逻辑地址24KB，页表的内容为：[2,5,6,8,3,11]。<br>
+则逻辑地址12293转换成物理地址为多少？给出计算过程。</p>
+<p>12293D=011|0000,0000,0101B</p>
+<p>页号p=011=3 =&gt; 帧号8</p>
+<p>页内偏移d=101=5</p>
+<p>物理地址=帧号<em>页大小+页内偏移=8</em>4KB+5=32768+5=32773</p>
+<h4 id="3-5-例题2">3.5 例题2</h4>
+<p>如果访问一次内存要1.5ns，快表的命中率为85%，查找快表的时间为0.5ns。计算该系统的有效访问时间。</p>
+<p>EMAT = (T + ε)α + (2T + ε)(1 - α) = (1.5 + 0.5) * 0.85 + (2 * 1.5 + 0.5) * (1 - 0.85)</p>
+<h3 id="4-分段（Segmentation）">4. 分段（Segmentation）</h3>
+<p>分段是指将逻辑地址空间划分成一组段，每个段都有名称和长度。<br>
+地址指定了段名和段内偏移。<br>
+因此用户可通过两个量来指定地址段名和偏移，编译器会自动根据用户程序构造段。</p>
+<p>逻辑地址由两个元素组成：&lt;段号s，段内偏移d&gt;</p>
+<p>段表：将二维的用户定义地址映射为一维物理地址。段表的每个条目都包含：</p>
+<ul>
+<li>基地址：包含段的起始地址</li>
+<li>界限：指定段的长度</li>
+</ul>
+<p>段表基地址寄存器（STBR）指向内存中的段表所在的物理地址</p>
+<p>段表界限寄存器（STLR）指示程序所用的段的个数，段号S小于STLR的时候才是有效的</p>
+<h3 id="5-比较">5. 比较</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">连续内存分配</th>
+<th style="text-align:center">分页</th>
+<th style="text-align:center">分段</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">外部碎片</td>
+<td style="text-align:center">有</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">有</td>
+</tr>
+<tr>
+<td style="text-align:center">内部碎片</td>
+<td style="text-align:center">无</td>
+<td style="text-align:center">有</td>
+<td style="text-align:center">无</td>
+</tr>
+<tr>
+<td style="text-align:center">代码共享</td>
+<td style="text-align:center">不可以</td>
+<td style="text-align:center">可以</td>
+<td style="text-align:center">可以</td>
+</tr>
+</tbody>
+</table>
+<h3 id="6-其他">6. 其他</h3>
+<p>地址映射是指将程序中的<strong>逻辑</strong>地址转换为内存中的<strong>物理</strong>地址。</p>
+<p>在分页管理系统中，为实现地址转换设置了控制寄存器，其中存放的是<strong>页表</strong>在内存中的起始地址。</p>
+<p>存储管理应具有的功能包括：<strong>内存分配与回收</strong>，<strong>地址映射</strong>，<strong>内存保护</strong>和<strong>内存扩充</strong>。</p>
+<p>在分页式虚拟内存中，当发现某页不在<strong>页表</strong>中，将产生缺页中断。若内存没有空闲帧，则需要进行<strong>页面置换</strong>。如果算法选择不合理，可能会出现频繁的页面调度，系统产生<strong>抖动</strong>现象。</p>
+<h2 id="九、虚拟内存">九、虚拟内存</h2>
+<h3 id="1-有效访问时间">1. 有效访问时间</h3>
+<p>有效访问时间（Effective Access Time, EAT）是指在虚拟内存系统中，平均每次访问内存所需的时间。</p>
+<p>EAT的计算公式为：<br>
+$$<br>
+EAT = (1 - p) \times T + p \times S<br>
+$$</p>
+<ul>
+<li>p：缺页率（Page Fault Rate），表示访问内存时发生缺页的概率</li>
+<li>T：平均内存访问时间</li>
+<li>S：平均页错误处理时间</li>
+</ul>
+<p>实现按需页面调度要解决的两个问题：</p>
+<ol>
+<li>帧分配：内存中存在多个进程，需要决定每个进程分配多少帧</li>
+<li>页面置换：当内存满时，需要决定将哪个页面换出，原则：最小页错误率</li>
+</ol>
+<h3 id="2-页面置换算法">2. 页面置换算法</h3>
+<p>页面置换的基本方法：</p>
+<ol>
+<li>查找所需页在磁盘上的位置。</li>
+<li>查找空闲帧
+<ul>
+<li>如果有空闲帧，那么就使用它；</li>
+<li>如果没有空闲帧，就使用页面置换算法选择一个“牺牲”帧。</li>
+<li>将“牺牲”帧的内容写到磁盘上，修改页表和帧表。</li>
+</ul>
+</li>
+<li>将所需的页读入空闲帧，修改页表和帧表。</li>
+<li>重启进程。</li>
+</ol>
+<h3 id="3-FIFO页面置换算法">3. FIFO页面置换算法</h3>
+<p>FIFO（First In First Out）页面置换算法是最简单的页面置换算法。</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  1 , 2 , 3 , 4 , 1 , 2 , 5 , 1 , 2 , 3 , 4 , 5</span><br><span class="line"></span><br><span class="line">|<span class="string"> 1*</span>|<span class="string"> 1 </span>|<span class="string"> 1 </span>|<span class="string"> 4*</span>|<span class="string"> 4 </span>|<span class="string"> 4 </span>|<span class="string"> 5*</span>|<span class="string">   </span>|<span class="string">   </span>|<span class="string"> 5 </span>|<span class="string"> 5 </span>|<span class="string"> H </span>|</span><br><span class="line">|<span class="string">   </span>|<span class="string"> 2*</span>|<span class="string"> 2 </span>|<span class="string"> 2 </span>|<span class="string"> 1*</span>|<span class="string"> 1 </span>|<span class="string"> 1 </span>|<span class="string"> H </span>|<span class="string">   </span>|<span class="string"> 3*</span>|<span class="string"> 3 </span>|<span class="string">   </span>|</span><br><span class="line">|<span class="string">   </span>|<span class="string">   </span>|<span class="string"> 3*</span>|<span class="string"> 3 </span>|<span class="string"> 3 </span>|<span class="string"> 2*</span>|<span class="string"> 2 </span>|<span class="string">   </span>|<span class="string"> H </span>|<span class="string"> 2 </span>|<span class="string"> 4*</span>|<span class="string">   </span>|</span><br></pre></td></tr></table></figure>
+<p>页错误次数：9</p>
+<p>规律：不计命中，自某帧进入内存开始会出现n次，n为内存帧数</p>
+<p>Belady异常：页错误率可能会随着所分配的帧数的增加而增加，如上例增加为4帧时：</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">  1 , 2 , 3 , 4 , 1 , 2 , 5 , 1 , 2 , 3 , 4 , 5</span><br><span class="line"></span><br><span class="line">|<span class="string"> 1*</span>|<span class="string"> 1 </span>|<span class="string"> 1 </span>|<span class="string"> 1 </span>|<span class="string"> H </span>|<span class="string">   </span>|<span class="string"> 5*</span>|<span class="string"> 5 </span>|<span class="string"> 5 </span>|<span class="string"> 5 </span>|<span class="string"> 4*</span>|<span class="string"> 4 </span>|</span><br><span class="line">|<span class="string">   </span>|<span class="string"> 2*</span>|<span class="string"> 2 </span>|<span class="string"> 2 </span>|<span class="string">   </span>|<span class="string"> H </span>|<span class="string"> 2 </span>|<span class="string"> 1*</span>|<span class="string"> 1 </span>|<span class="string"> 1 </span>|<span class="string"> 1 </span>|<span class="string"> 5*</span>|</span><br><span class="line">|<span class="string">   </span>|<span class="string">   </span>|<span class="string"> 3*</span>|<span class="string"> 3 </span>|<span class="string">   </span>|<span class="string">   </span>|<span class="string"> 3 </span>|<span class="string"> 3 </span>|<span class="string"> 2*</span>|<span class="string"> 2 </span>|<span class="string"> 2 </span>|<span class="string"> 2 </span>|</span><br><span class="line">|<span class="string">   </span>|<span class="string">   </span>|<span class="string">   </span>|<span class="string"> 4*</span>|<span class="string">   </span>|<span class="string">   </span>|<span class="string"> 4 </span>|<span class="string"> 4 </span>|<span class="string"> 4 </span>|<span class="string"> 3*</span>|<span class="string"> 3 </span>|<span class="string"> 3 </span>|</span><br></pre></td></tr></table></figure>
+<h3 id="4-最优页面置换OPT">4. 最优页面置换OPT</h3>
+<p>最优页面置换算法（Optimal Page Replacement）是理论上最好的页面置换算法。</p>
+<p>选择将来最长时间不被访问的页面进行置换。</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  1 , 2 , 3 , 4 , 1 , 2 , 5 , 1 , 2 , 3 , 4 , 5</span><br><span class="line"></span><br><span class="line">|<span class="string"> 1*</span>|<span class="string"> 1 </span>|<span class="string"> 1 </span>|<span class="string"> 1 </span>|<span class="string"> H </span>|<span class="string">   </span>|<span class="string"> 1 </span>|<span class="string"> H </span>|<span class="string">   </span>|<span class="string"> 3*</span>|<span class="string"> 3 </span>|<span class="string">   </span>|</span><br><span class="line">|<span class="string">   </span>|<span class="string"> 2*</span>|<span class="string"> 2 </span>|<span class="string"> 2 </span>|<span class="string">   </span>|<span class="string"> H </span>|<span class="string"> 2 </span>|<span class="string">   </span>|<span class="string"> H </span>|<span class="string"> 2 </span>|<span class="string"> 4*</span>|<span class="string">   </span>|</span><br><span class="line">|<span class="string">   </span>|<span class="string">   </span>|<span class="string"> 3*</span>|<span class="string"> 4*</span>|<span class="string">   </span>|<span class="string">   </span>|<span class="string"> 5*</span>|<span class="string">   </span>|<span class="string">   </span>|<span class="string"> 5 </span>|<span class="string"> 5 </span>|<span class="string"> H </span>|</span><br></pre></td></tr></table></figure>
+<p>页错误次数：7</p>
+<h3 id="5-LRU页面置换算法">5. LRU页面置换算法</h3>
+<p>LRU（Least Recently Used）页面置换算法是基于最近最少使用原则的页面置换算法。</p>
+<p>LRU算法选择最久未被访问的页面进行置换。</p>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">  1 , 2 , 3 , 4 , 1 , 2 , 5 , 1 , 2 , 3 , 4 , 5</span><br><span class="line"></span><br><span class="line">|<span class="string"> 1*</span>|<span class="string"> 1 </span>|<span class="string"> 1 </span>|<span class="string"> 4*</span>|<span class="string"> 4 </span>|<span class="string"> 4 </span>|<span class="string"> 5*</span>|<span class="string">   </span>|<span class="string">   </span>|<span class="string"> 3*</span>|<span class="string"> 5 </span>|<span class="string"> H </span>|</span><br><span class="line">|<span class="string">   </span>|<span class="string"> 2*</span>|<span class="string"> 2 </span>|<span class="string"> 2 </span>|<span class="string"> 1*</span>|<span class="string"> 1 </span>|<span class="string"> 1 </span>|<span class="string"> H </span>|<span class="string">   </span>|<span class="string"> 1 </span>|<span class="string"> 4*</span>|<span class="string">   </span>|</span><br><span class="line">|<span class="string">   </span>|<span class="string">   </span>|<span class="string"> 3*</span>|<span class="string"> 3 </span>|<span class="string"> 3 </span>|<span class="string"> 2*</span>|<span class="string"> 2 </span>|<span class="string">   </span>|<span class="string"> H </span>|<span class="string"> 2 </span>|<span class="string"> 2 </span>|<span class="string">   </span>|</span><br></pre></td></tr></table></figure>
+<p>页错误次数：9</p>
+<p>OPT和LRU没有Belady异常。</p>
+<h2 id="十、文件系统">十、文件系统</h2>
+<h3 id="1-概念">1. 概念</h3>
+<ul>
+<li>文件属性：名称、类型、位置、大小、时间戳、权限等</li>
+<li>文件操作：创建、删除、读、写、重定位等</li>
+<li>文件类型：扩展名</li>
+</ul>
+<h3 id="2-访问方法">2. 访问方法</h3>
+<ol>
+<li>顺序访问：从头到尾依次访问文件内容
+<ul>
+<li>read_next(), write_next(), reset()等</li>
+</ul>
+</li>
+<li>直接访问（随机访问、相对访问）：可以直接跳转到文件的任意位置进行读写操作
+<ul>
+<li>read(n), write(n), position_to(n)等</li>
+</ul>
+</li>
+<li>索引访问：使用索引表来快速定位文件中的数据块</li>
+</ol>
+<h3 id="3-文件的路径名">3. 文件的路径名</h3>
+<p><code>盘符:\目录1\目录2\...\文件名.扩展名</code></p>
+<p>相对路径、绝对路径</p>
+<h3 id="4-目录与磁盘结构">4. 目录与磁盘结构</h3>
+<ol>
+<li>单层目录：所有文件都在同一目录下，命名冲突、分组问题</li>
+<li>双层目录：每个用户有自己的目录，用户目录下有文件</li>
+<li>树形目录：典型，相对路径、绝对路径都唯一</li>
+<li>无环图目录：有多条路径访问同一文件
+<ul>
+<li>命名：一个文件可有多个绝对路径名，不同文件名可能表示同一文件</li>
+<li>删除：删除文件导致悬挂指针（指向不存在的文件或者执行了其他文件）</li>
+</ul>
+</li>
+<li>通用图目录：有多条路径访问同一文件或目录</li>
+</ol>
+<h2 id="十一、文件系统实现（磁盘分配方法）">十一、文件系统实现（磁盘分配方法）</h2>
+<h3 id="1-连续分配">1. 连续分配</h3>
+<p>每个文件在磁盘上占用一组连续的块。</p>
+<p>优点：</p>
+<ol>
+<li>简单：只需要块起始地址和块长度（占用几个块）就能访问文件</li>
+<li>访问连续分配的文件所需的寻道时间最小</li>
+<li>支持随机访问</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>外部碎片：随着文件的创建和删除，磁盘上会产生外部碎片，导致无法分配连续空间</li>
+<li>有时创建文件时不能确定文件的大小</li>
+<li>文件不能动态扩展</li>
+</ol>
+<h3 id="2-链接分配">2. 链接分配</h3>
+<p>每个文件是磁盘块的链表，每个块包含下一个块的地址。</p>
+<p>优点：</p>
+<ol>
+<li>简单：只需要起始地址；</li>
+<li>利用率高：没有外部碎片，只要有空闲块，文件就能增大</li>
+</ol>
+<p>缺点：</p>
+<ol>
+<li>只能用于文件的顺序访问，不支持文件的直接访问。</li>
+<li>指针需要空间，磁盘空间有一部分用于存储指针。</li>
+<li>可靠性低：如果指针丢失或损坏可能牵连到空闲空间列表。</li>
+</ol>
+<h3 id="3-索引分配（散列分配）">3. 索引分配（散列分配）</h3>
+<p>将所有指针放在一起，形成一个索引块，索引块包含文件的所有块的地址。</p>
+<p>索引块方案：链接索引、多级索引、组合方案</p>
+<h2 id="十二、大容量存储结构（磁盘）">十二、大容量存储结构（磁盘）</h2>
+<h3 id="1-磁盘速度">1. 磁盘速度</h3>
+<p>磁盘的访问时间：</p>
+<ul>
+<li>数据传输时间：驱动器与计算机之间的数据传输速率</li>
+<li>定位时间/随机访问时间
+<ul>
+<li>寻道时间：磁头移动到柱面所需的时间</li>
+<li>旋转延时：等待扇区旋转到磁头下所需的时间</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-磁盘调度">2. 磁盘调度</h3>
+<p>假设有一个磁盘队列，其I/O对各个柱面上块的请求顺序：98, 183, 37, 122, 14, 124, 65, 67，磁头位于53号柱面</p>
+<p>寻道距离：寻道顺序下，相邻项序号之差的绝对值之和</p>
+<p>调度时间=寻道距离×平均寻道时间+旋转延时×旋转次数</p>
+<h4 id="2-1-FCFS">2.1 FCFS</h4>
+<p>寻道顺序：53-&gt;98-&gt;183-&gt;37-&gt;122-&gt;14-&gt;124-&gt;65-&gt;67</p>
+<p>寻道距离：640</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Posts/Course/operating_system/image-7.png" alt="alt text"></p>
+<h4 id="2-2-SSTF-最短寻道时间优先">2.2 SSTF 最短寻道时间优先</h4>
+<p>优先前往距离当前磁头位置最近的请求。</p>
+<p>寻道顺序：53-&gt;65-&gt;67-&gt;37-&gt;14-&gt;98-&gt;122-&gt;124-&gt;183</p>
+<p>寻道距离：236</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Posts/Course/operating_system/image-8.png" alt="alt text"></p>
+<h4 id="2-3-SCAN-扫描算法">2.3 SCAN 扫描算法</h4>
+<p>磁臂丛磁盘的一端移动到另一端，当磁头移过每个柱面时，处理该柱面上的请求；到达另一端时返回并依次处理柱面上的请求。</p>
+<p>寻道顺序：53-&gt;37-&gt;14-&gt;(0)-&gt;65-&gt;67-&gt;98-&gt;122-&gt;124-&gt;183</p>
+<p>寻道距离：208+28(到达0造成的多余寻道距离)=236</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Posts/Course/operating_system/image-9.png" alt="alt text"></p>
+<h4 id="2-4-C-SCAN-循环扫描算法">2.4 C-SCAN 循环扫描算法</h4>
+<p>提供更加均匀的等待时间，磁头移动到另一端后立即返回磁盘开始，返回时不处理请求。</p>
+<p>寻道顺序：53-&gt;65-&gt;67-&gt;98-&gt;122-&gt;124-&gt;183-&gt;(199)-&gt;(0)-&gt;14-&gt;37</p>
+<p>寻道距离：382</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Posts/Course/operating_system/image-10.png" alt="alt text"></p>
+<h4 id="2-5-LOOK-C-LOOK-调度算法">2.5 LOOK/C-LOOK 调度算法</h4>
+<p>和SCAN/C-SCAN对应，LOOK调度算法只扫描到最后一个请求的柱面，然后返回。</p>
+<p>C-LOOK寻道顺序：53-&gt;65-&gt;67-&gt;98-&gt;122-&gt;124-&gt;183-&gt;14-&gt;37</p>
+<p>寻道距离：322</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Posts/Course/operating_system/image-11.png" alt="alt text"></p>
+<h2 id="十三、I-O系统">十三、I/O系统</h2>
+<h3 id="1-I-O硬件">1. I/O硬件</h3>
+<ol>
+<li>轮询（Polling）：I/O设备传输数据时CPU处于忙等状态，CPU不断检查设备状态，直到设备准备好数据。
+<ul>
+<li>并发性差、I/O效率低。</li>
+</ul>
+</li>
+<li>中断（Interrupt）：I/O设备传输数据时，CPU可以为其它进程服务，每传输完一个字节，由I/O设备向CPU发送中断请求信号。
+<ul>
+<li>并发性好，传送大批数据时I/O效率低。</li>
+<li>适用于低速外设，如键盘、鼠标等</li>
+</ul>
+</li>
+<li>内存直接访问(DMA)：CPU提供源地址、目标地址以及字节数，完成整块数据传输后产生一次中断
+<ul>
+<li>并发性好，可一次性传送大批数据，效率高</li>
+<li>适用于高速外设，如磁盘、网络等</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-中断和陷阱">2. 中断和陷阱</h3>
+<p>中断：操作系统中发生某一事件时，硬件将触发一个中断，中断信号通过中断向量将控制程序转移到合适的终端服务程序，以改变CPU的执行过程</p>
+<p>陷阱：陷阱是由软件产生的，一般由用户请求或者错误引起，主要用于调用操作系统服务或者捕捉算法错误。</p>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>《操作系统》课程笔记</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://www.cclmsy.cc/posts/operating_system.html">https://www.cclmsy.cc/posts/operating_system.html</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>深翼💫</h></div></div><div class="post-copyright-c"><h>发布于</h><div class="post-copyright-cc-info"><h>2025-06-17</h></div></div><div class="post-copyright-u"><h>更新于</h><div class="post-copyright-cc-info"><h>2025-07-18</h></div></div><div class="post-copyright-c"><h>许可协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/"><div class="tags-punctuation"><svg class="faa-tada icon" style="height:1.1em;width:1.1em;fill:currentColor;position:relative;top:2px;margin-right:3px" aria-hidden="true"><use xlink:href="#icon-sekuaibiaoqian"></use></svg></div>课程笔记</a></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/posts/2501.00192.html"><img class="prev-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Covers/112.webp" onerror="onerror=null;src='/assets/ErrCover.webp'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">论文笔记|MLLM-as-a-Judge for Image Safety without Human Labeling</div></div></a></div><div class="next-post pull-right"><a href="/posts/2403.11116.html"><img class="next-cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Covers/70.webp" onerror="onerror=null;src='/assets/ErrCover.webp'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">论文笔记|视幻觉评估数据集PhD：A ChatGPT-Prompted Visual hallucination Evaluation Dataset</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><svg class="meta_icon" style="width:22px;height:22px;position:relative;top:5px"><use xlink:href="#icon-mulu1"></use></svg><span style="font-weight:bold">目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%AF%BC%E8%AE%BA"><span class="toc-text">一、导论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%84%E6%88%90%E9%83%A8%E5%88%86"><span class="toc-text">1. 计算机系统的组成部分</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="toc-text">2. 操作系统的概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AD%98%E5%82%A8%E5%B1%82%E6%AC%A1"><span class="toc-text">3. 存储层次</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%A4%9A%E9%81%93%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1"><span class="toc-text">4. 多道程序设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%8F%8C%E9%87%8D%E6%A8%A1%E5%BC%8F%E5%92%8C%E7%89%B9%E6%9D%83%E6%8C%87%E4%BB%A4"><span class="toc-text">5. 双重模式和特权指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%AE%9A%E6%97%B6%E5%99%A8"><span class="toc-text">6. 定时器</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84"><span class="toc-text">二、操作系统结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E6%9C%8D%E5%8A%A1"><span class="toc-text">1. 操作系统服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%91%BD%E4%BB%A4%E8%A7%A3%E9%87%8A%E7%A8%8B%E5%BA%8F"><span class="toc-text">2. 命令解释程序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="toc-text">3. 系统调用类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%BF%9B%E7%A8%8B-Process"><span class="toc-text">三、进程(Process)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BF%9B%E7%A8%8B"><span class="toc-text">1. 进程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%BF%9B%E7%A8%8B%E6%8E%A7%E5%88%B6%E5%9D%97-PCB"><span class="toc-text">进程控制块(PCB)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%8A%E4%B8%8B%E6%96%87%E5%88%87%E6%8D%A2"><span class="toc-text">上下文切换</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%BF%9B%E7%A8%8B%E7%8A%B6%E6%80%81%E4%B8%8E%E8%BD%AC%E6%8D%A2"><span class="toc-text">2. 进程状态与转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6"><span class="toc-text">3. 进程调度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%BF%9B%E7%A8%8B%E5%88%9B%E5%BB%BA-%E7%BB%88%E6%AD%A2"><span class="toc-text">4. 进程创建&#x2F;终止</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E8%BF%9B%E7%A8%8B%E5%8D%8F%E4%BD%9C-%E9%80%9A%E4%BF%A1"><span class="toc-text">5. 进程协作&#x2F;通信</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E7%BA%BF%E7%A8%8B-Thread"><span class="toc-text">四、线程(Thread)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BA%BF%E7%A8%8B"><span class="toc-text">1. 线程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%BA%BF%E7%A8%8B%E4%B8%8E%E8%BF%9B%E7%A8%8B"><span class="toc-text">2. 线程与进程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">3. 多线程的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%94%A8%E6%88%B7%E7%BA%BF%E7%A8%8B%E5%92%8C%E5%86%85%E6%A0%B8%E7%BA%BF%E7%A8%8B"><span class="toc-text">4. 用户线程和内核线程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E8%BF%9B%E7%A8%8B%E8%B0%83%E5%BA%A6"><span class="toc-text">五、进程调度</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">1. 基本概念</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-CPU-I-O%E6%89%A7%E8%A1%8C%E5%91%A8%E6%9C%9F"><span class="toc-text">1.1 CPU-I&#x2F;O执行周期</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-CPU%E8%B0%83%E5%BA%A6%E7%A8%8B%E5%BA%8F"><span class="toc-text">1.2 CPU调度程序</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E8%B0%83%E5%BA%A6%E7%A8%8B%E5%BA%8F-%E5%88%86%E6%B4%BE%E7%A8%8B%E5%BA%8F"><span class="toc-text">1.3 调度程序&#x2F;分派程序</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%B0%83%E5%BA%A6%E5%87%86%E5%88%99"><span class="toc-text">2. 调度准则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="toc-text">3. 调度算法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-%E5%85%88%E5%88%B0%E5%85%88%E6%9C%8D%E5%8A%A1%EF%BC%88FCFS%EF%BC%89"><span class="toc-text">3.1 先到先服务（FCFS）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E6%9C%80%E7%9F%AD%E4%BD%9C%E4%B8%9A%E4%BC%98%E5%85%88"><span class="toc-text">3.2 最短作业优先</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-%E4%BC%98%E5%85%88%E7%BA%A7%E8%B0%83%E5%BA%A6"><span class="toc-text">3.3 优先级调度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-%E8%BD%AE%E8%BD%AC%E8%B0%83%E5%BA%A6%EF%BC%88RR%EF%BC%89"><span class="toc-text">3.4 轮转调度（RR）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-%E5%A4%9A%E7%BA%A7%E9%98%9F%E5%88%97%E8%B0%83%E5%BA%A6"><span class="toc-text">3.5 多级队列调度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-%E5%A4%9A%E7%BA%A7%E5%8F%8D%E9%A6%88%E9%98%9F%E5%88%97%E8%B0%83%E5%BA%A6"><span class="toc-text">3.6 多级反馈队列调度</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95%E8%AE%A1%E7%AE%97%E9%A2%98"><span class="toc-text">4. 调度算法计算题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-FCFS%E8%B0%83%E5%BA%A6"><span class="toc-text">4.1 FCFS调度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-SJF%E8%B0%83%E5%BA%A6"><span class="toc-text">4.2 SJF调度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3-SRTF%E8%B0%83%E5%BA%A6"><span class="toc-text">4.3 SRTF调度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-4-%E4%BC%98%E5%85%88%E7%BA%A7%E8%B0%83%E5%BA%A6%EF%BC%88%E9%9D%9E%E6%8A%A2%E5%8D%A0%E5%BC%8F%EF%BC%89"><span class="toc-text">4.4 优先级调度（非抢占式）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-5-%E4%BC%98%E5%85%88%E7%BA%A7%E8%B0%83%E5%BA%A6%EF%BC%88%E6%8A%A2%E5%8D%A0%E5%BC%8F%EF%BC%89"><span class="toc-text">4.5 优先级调度（抢占式）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-6-%E8%BD%AE%E8%BD%AC%E8%B0%83%E5%BA%A6%EF%BC%88RR%EF%BC%89"><span class="toc-text">4.6 轮转调度（RR）</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E8%BF%9B%E7%A8%8B%E5%90%8C%E6%AD%A5"><span class="toc-text">六、进程同步</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%AB%9E%E4%BA%89%E6%9D%A1%E4%BB%B6"><span class="toc-text">1. 竞争条件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%B4%E7%95%8C%E5%8C%BA%E9%97%AE%E9%A2%98"><span class="toc-text">2. 临界区问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Peterson%E7%AE%97%E6%B3%95"><span class="toc-text">3. Peterson算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%A1%AC%E4%BB%B6%E5%90%8C%E6%AD%A5"><span class="toc-text">4. 硬件同步</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E4%BF%A1%E5%8F%B7%E9%87%8F-Semaphore"><span class="toc-text">5. 信号量(Semaphore)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E6%AD%BB%E9%94%81%E5%92%8C%E9%A5%A5%E9%A5%BF"><span class="toc-text">6. 死锁和饥饿</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-%E7%BB%8F%E5%85%B8%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98"><span class="toc-text">7. 经典同步问题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#7-1-%E5%AD%98%E5%9C%A8%E5%85%88%E5%90%8E%E5%85%B3%E7%B3%BB%E7%9A%84%E7%AE%80%E5%8D%95%E5%90%8C%E6%AD%A5%E9%97%AE%E9%A2%98"><span class="toc-text">7.1 存在先后关系的简单同步问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-2-%E7%94%9F%E4%BA%A7%E8%80%85-%E6%B6%88%E8%B4%B9%E8%80%85%E9%97%AE%E9%A2%98"><span class="toc-text">7.2 生产者-消费者问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-3-%E8%AF%BB%E8%80%85-%E5%86%99%E8%80%85%E9%97%AE%E9%A2%98"><span class="toc-text">7.3 读者-写者问题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-4-%E5%93%B2%E5%AD%A6%E5%AE%B6%E5%B0%B1%E9%A4%90%E9%97%AE%E9%A2%98"><span class="toc-text">7.4 哲学家就餐问题</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%83%E3%80%81%E6%AD%BB%E9%94%81-Deadlock"><span class="toc-text">七、死锁(Deadlock)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%AD%BB%E9%94%81%E7%9A%844%E4%B8%AA%E5%BF%85%E8%A6%81%E6%9D%A1%E4%BB%B6"><span class="toc-text">1. 死锁的4个必要条件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BE%8B%E9%A2%98"><span class="toc-text">例题</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D%E5%9B%BE"><span class="toc-text">2. 资源分配图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%AD%BB%E9%94%81%E7%9A%84%E9%A2%84%E9%98%B2"><span class="toc-text">3. 死锁的预防</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%AD%BB%E9%94%81%E7%9A%84%E9%81%BF%E5%85%8D"><span class="toc-text">4. 死锁的避免</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1-%E8%B5%84%E6%BA%90%E5%88%86%E9%85%8D%E5%9B%BE%E7%AE%97%E6%B3%95"><span class="toc-text">4.1 资源分配图算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2-%E9%93%B6%E8%A1%8C%E5%AE%B6%E7%AE%97%E6%B3%95"><span class="toc-text">4.2 银行家算法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%AD%BB%E9%94%81%E7%9A%84%E6%A3%80%E6%B5%8B%E5%92%8C%E6%81%A2%E5%A4%8D"><span class="toc-text">5. 死锁的检测和恢复</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AB%E3%80%81%E4%B8%BB%E5%AD%98%E7%AE%A1%E7%90%86"><span class="toc-text">八、主存管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86%E5%8D%95%E5%85%83MMU"><span class="toc-text">1. 内存管理单元MMU</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%BF%9E%E7%BB%AD%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D"><span class="toc-text">2. 连续内存分配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%88%86%E9%A1%B5%EF%BC%88Paging%EF%BC%89"><span class="toc-text">3. 分页（Paging）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1-%E5%9F%BA%E6%9C%AC%E6%96%B9%E6%B3%95"><span class="toc-text">3.1 基本方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E8%BD%AC%E6%8D%A2%E8%A1%A8%E7%BC%93%E5%86%B2TLB"><span class="toc-text">3.2 转换表缓冲TLB</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-%E9%A1%B5%E8%A1%A8%E7%9A%84%E7%BB%93%E6%9E%84"><span class="toc-text">3.3 页表的结构</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-%E4%BE%8B%E9%A2%981"><span class="toc-text">3.4 例题1</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-%E4%BE%8B%E9%A2%982"><span class="toc-text">3.5 例题2</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%88%86%E6%AE%B5%EF%BC%88Segmentation%EF%BC%89"><span class="toc-text">4. 分段（Segmentation）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%AF%94%E8%BE%83"><span class="toc-text">5. 比较</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E5%85%B6%E4%BB%96"><span class="toc-text">6. 其他</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%9D%E3%80%81%E8%99%9A%E6%8B%9F%E5%86%85%E5%AD%98"><span class="toc-text">九、虚拟内存</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%9C%89%E6%95%88%E8%AE%BF%E9%97%AE%E6%97%B6%E9%97%B4"><span class="toc-text">1. 有效访问时间</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95"><span class="toc-text">2. 页面置换算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-FIFO%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95"><span class="toc-text">3. FIFO页面置换算法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E6%9C%80%E4%BC%98%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2OPT"><span class="toc-text">4. 最优页面置换OPT</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-LRU%E9%A1%B5%E9%9D%A2%E7%BD%AE%E6%8D%A2%E7%AE%97%E6%B3%95"><span class="toc-text">5. LRU页面置换算法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E3%80%81%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="toc-text">十、文件系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%A6%82%E5%BF%B5"><span class="toc-text">1. 概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%AE%BF%E9%97%AE%E6%96%B9%E6%B3%95"><span class="toc-text">2. 访问方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%96%87%E4%BB%B6%E7%9A%84%E8%B7%AF%E5%BE%84%E5%90%8D"><span class="toc-text">3. 文件的路径名</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E7%9B%AE%E5%BD%95%E4%B8%8E%E7%A3%81%E7%9B%98%E7%BB%93%E6%9E%84"><span class="toc-text">4. 目录与磁盘结构</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%80%E3%80%81%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E5%AE%9E%E7%8E%B0%EF%BC%88%E7%A3%81%E7%9B%98%E5%88%86%E9%85%8D%E6%96%B9%E6%B3%95%EF%BC%89"><span class="toc-text">十一、文件系统实现（磁盘分配方法）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BF%9E%E7%BB%AD%E5%88%86%E9%85%8D"><span class="toc-text">1. 连续分配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E9%93%BE%E6%8E%A5%E5%88%86%E9%85%8D"><span class="toc-text">2. 链接分配</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%B4%A2%E5%BC%95%E5%88%86%E9%85%8D%EF%BC%88%E6%95%A3%E5%88%97%E5%88%86%E9%85%8D%EF%BC%89"><span class="toc-text">3. 索引分配（散列分配）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%BA%8C%E3%80%81%E5%A4%A7%E5%AE%B9%E9%87%8F%E5%AD%98%E5%82%A8%E7%BB%93%E6%9E%84%EF%BC%88%E7%A3%81%E7%9B%98%EF%BC%89"><span class="toc-text">十二、大容量存储结构（磁盘）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%A3%81%E7%9B%98%E9%80%9F%E5%BA%A6"><span class="toc-text">1. 磁盘速度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E7%A3%81%E7%9B%98%E8%B0%83%E5%BA%A6"><span class="toc-text">2. 磁盘调度</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-FCFS"><span class="toc-text">2.1 FCFS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-SSTF-%E6%9C%80%E7%9F%AD%E5%AF%BB%E9%81%93%E6%97%B6%E9%97%B4%E4%BC%98%E5%85%88"><span class="toc-text">2.2 SSTF 最短寻道时间优先</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-SCAN-%E6%89%AB%E6%8F%8F%E7%AE%97%E6%B3%95"><span class="toc-text">2.3 SCAN 扫描算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-C-SCAN-%E5%BE%AA%E7%8E%AF%E6%89%AB%E6%8F%8F%E7%AE%97%E6%B3%95"><span class="toc-text">2.4 C-SCAN 循环扫描算法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-LOOK-C-LOOK-%E8%B0%83%E5%BA%A6%E7%AE%97%E6%B3%95"><span class="toc-text">2.5 LOOK&#x2F;C-LOOK 调度算法</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%81%E4%B8%89%E3%80%81I-O%E7%B3%BB%E7%BB%9F"><span class="toc-text">十三、I&#x2F;O系统</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-I-O%E7%A1%AC%E4%BB%B6"><span class="toc-text">1. I&#x2F;O硬件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E4%B8%AD%E6%96%AD%E5%92%8C%E9%99%B7%E9%98%B1"><span class="toc-text">2. 中断和陷阱</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background-color: transparent;"><div id="footer-wrap"><div id="ft"><div class="ft-item-1"><div class="t-top"><div class="t-t-l"><p class="ft-t t-l-t">星辰之旅🌠</p><!--格言🧬--><div class="bg-ad"><div>再看看那个光点，它就在这里，这是家园，这是我们 —— 你所爱的每一个人，你认识的一个人，你听说过的每一个人，曾经有过的每一个人，都在它上面度过他们的一生✨</div><div class="btn-xz-box"><a class="btn-xz" target="_blank" rel="noopener" href="https://stellarium.org/">点击开启星辰之旅</a></div></div></div><div class="t-t-r"><p class="ft-t t-l-t">猜你想看💡</p><ul class="ft-links"><li><a href="/site/time/">建设进程</a><a href="/about/">关于作者</a></li><li><a href="/archives/">文章归档</a><a href="/categories/">文章分类</a></li><li><a href="/tags/">文章标签</a><a href="/site/census/">网站统计</a></li><li><a href="/box/Gallery/">我的画廊</a><a href="/social/link/">我的朋友</a></li><li><a href="/comments/">留点什么</a><a href="/box/nav/">网址导航</a></li></ul></div></div></div><div class="ft-item-2"><p class="ft-t">推荐友链⌛</p><div class="ft-img-group"><div class="img-group-item"><a target="_blank" rel="noopener" href="http://lxtyin.ac.cn/" title="lx_tyin"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Images/Flinks/Avatars/lxtyin.png" alt=""/></a></div><div class="img-group-item"><a target="_blank" rel="noopener" href="https://blog.voyage200.top/" title="voyage200"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://blog.voyage200.top/usr/uploads/2024/08/2670878194.jpg" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/ErrAvatar.jpg" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/ErrAvatar.jpg" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/ErrAvatar.jpg" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/ErrAvatar.jpg" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/ErrAvatar.jpg" alt=""/></a></div><div class="img-group-item"><a href="javascript:void(0)" title="广告位招租"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="/assets/ErrAvatar.jpg" alt=""/></a></div></div></div></div><div class="copyright"><span><b>&copy;2023-2025</b></span><span><b>&nbsp;&nbsp;By 深翼💫</b></span></div><div class="footer_custom_text">Love is a touch and yet not a touch.</div><div id="workboard"></div><p id="ghbdages"><a class="github-badge" target="_blank" href="https://hexo.io/" style="margin-inline:5px" title="博客框架为Hexo_v6.3.0"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Images/Icons/Frame-Hexo-blue.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://butterfly.js.org/" style="margin-inline:5px" title="主题版本Butterfly_v4.3.1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Images/Icons/Theme-Butterfly.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://www.jsdelivr.com/" style="margin-inline:5px" title="本站使用JsDelivr为静态资源提供CDN加速"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Images/Icons/CDN-jsDelivr-orange.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://vercel.com/" style="margin-inline:5px" title="本站采用多线部署，主线路托管于Vercel"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Images/Icons/Hosted-Vervel-brightgreen.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://github.com/" style="margin-inline:5px" title="本网站源码由Github提供存储仓库"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Images/Icons/Source-Github.svg" alt=""/></a><a class="github-badge" target="_blank" href="https://beian.miit.gov.cn/" style="margin-inline:5px" title="本站已加入浙ICP备，浙ICP备2023035770号-1"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Images/Icons/ICP.svg" alt=""/></a><a class="github-badge" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" style="margin-inline:5px" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.cclmsy.cc/Images/Icons/Copyright-BY--NC--SA4.svg" alt=""/></a></p></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><a class="icon-V hidden" onclick="switchNightMode()" title="浅色和深色模式转换"><svg width="25" height="25" viewBox="0 0 1024 1024"><use id="modeicon" xlink:href="#icon-moon"></use></svg></a><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button><button class="share" type="button" title="右键模式" onclick="changeMouseMode()"><i class="fas fa-mouse"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog right_side"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button class="share" type="button" title="分享链接" onclick="share()"><i class="fas fa-share-nodes"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i><span id="percent">0<span>%</span></span></button><button id="go-down" type="button" title="直达底部" onclick="btf.scrollToDest(document.body.scrollHeight, 500)"><i class="fas fa-arrow-down"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div class="js-pjax" id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="fa fa-refresh"></i></a><a class="rightMenu-item" href="javascript:rmf.scrollToTop();"><i class="fa fa-arrow-up"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();"><i class="fa fa-search"></i><span>百度搜索</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="#post-comment"><i class="fas fa-comment"></i><span>空降评论</span></a><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()"><i class="fa fa-link"></i><span>复制本文地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>新窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="javascript:rmf.saveAs()"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>在新窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制图片链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:randomPost()"><i class="fa fa-paper-plane"></i><span>随便逛逛</span></a><a class="rightMenu-item" href="javascript:switchNightMode();"><i class="fa fa-moon"></i><span>昼夜切换</span></a><a class="rightMenu-item" href="/about/"><i class="fa fa-info-circle"></i><span>关于博客</span></a><a class="rightMenu-item" href="javascript:toggleWinbox();"><i class="fas fa-cog"></i><span>美化设置</span></a><a class="rightMenu-item" href="javascript:rmf.fullScreen();"><i class="fas fa-expand"></i><span>切换全屏</span></a><a class="rightMenu-item" href="javascript:window.print();"><i class="fa-solid fa-print"></i><span>打印页面</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.staticfile.org/fancyapps-ui/4.0.31/fancybox.umd.min.js"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js" type="module"></script><script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js"></script><script src="/js/search/local-search.js"></script><script async="async">var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())
+setTimeout(function(){preloader.endLoading();}, 5000);
+document.getElementById('loading-box').addEventListener('click',()=> {preloader.endLoading()})</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    chtml: {
+      scale: 1.2
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        insertScript: [200, () => {
+          document.querySelectorAll('mjx-container:not\([display]\)').forEach(node => {
+            const target = node.parentNode
+            if (target.nodeName.toLowerCase() === 'li') {
+              target.parentNode.classList.add('has-jax')
+            } else {
+              target.classList.add('has-jax')
+            }
+          });
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.min.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><script>(()=>{
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.cclmsy.cc/',
+      region: '',
+      onCommentLoaded: function () {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.cclmsy.cc/',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(function (res) {
+      countELement.innerText = res[0].count
+    }).catch(function (err) {
+      console.error(err);
+    });
+  }
+
+  const runFn = () => {
+    init()
+    
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') {
+      setTimeout(runFn,0)
+      return
+    } 
+    getScript('https://cdn.staticfile.org/twikoo/1.6.8/twikoo.all.min.js').then(runFn)
+  }
+
+  if ('Twikoo' === 'Twikoo' || !true) {
+    if (true) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = () => {
+      loadTwikoo()
+    }
+  }
+})()</script></div><script src="https://cdn.staticfile.org/jquery/3.6.3/jquery.min.js"></script><script async src="https://cdn1.tianli0.top/npm/vue@2.6.14/dist/vue.min.js"></script><script async src="https://cdn1.tianli0.top/npm/element-ui@2.15.6/lib/index.js"></script><script async src="https://cdn.bootcdn.net/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script><script defer type="text/javascript" src="https://cdn1.tianli0.top/npm/sweetalert2@8.19.0/dist/sweetalert2.all.js"></script><script async src="//npm.elemecdn.com/pace-js@1.2.4/pace.min.js"></script><script defer src="https://cdn1.tianli0.top/gh/nextapps-de/winbox/dist/winbox.bundle.min.js"></script><script async src="//at.alicdn.com/t/c/font_3586335_hsivh70x0fm.js"></script><script async src="//at.alicdn.com/t/c/font_3636804_gr02jmjr3y9.js"></script><script async src="//at.alicdn.com/t/c/font_3612150_kfv55xn3u2g.js"></script><script async src="//at.alicdn.com/t/c/font_4272473_b20amoeaz6l.js"></script><script async src="https://cdn.wpon.cn/2022-sucai/Gold-ingot.js"></script><canvas id="universe"></canvas><canvas id="snow"></canvas><script defer src="/js/fomal.js"></script><script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script><script defer src="/_vercel/insights/script.js"></script><script>window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };</script><script defer src="/_vercel/speed-insights/script.js"></script><script id="click-show-text" src="https://cdnjs.cloudflare.com/ajax/libs/butterfly-extsrc/1.1.3/click-show-text.min.js" data-mobile="true" data-text="打赏999r,打赏999r,加训！,加训！,加训！,BUG+1,BUG+1,BUG+1,BUG+1,BUG+1,智慧+1,颜值+1,好运+1,技能+1,财富+1,才华+1,智慧+1,颜值+1,好运+1,技能+1,财富+1,才华+1,智慧+1,颜值+1,好运+1,技能+1,财富+1,才华+1,智慧+1,颜值+1,好运+1,技能+1,财富+1,才华+1,智慧+1,颜值+1,好运+1,技能+1,财富+1,才华+1,智慧+1,颜值+1,好运+1,技能+1,财富+1,才华+1,智慧+1,颜值+1,好运+1,技能+1,财富+1,才华+1,智慧+1,颜值+1,好运+1,技能+1,财富+1,才华+1,智慧+1,颜值+1,好运+1,技能+1,财富+1,才华+1,智慧+1,颜值+1,好运+1,技能+1,财富+1,才华+1" data-fontsize="16px" data-random="false" async="async"></script><link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script><script src="https://cdn1.tianli0.top/npm/js-heo@1.0.12/metingjs/Meting.min.js"></script><script src="https://lib.baomitu.com/pjax/0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show","#web_bg",".js-pjax","#bibi","body > title","#app","#tag-echarts","#posts-echart","#categories-echarts"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener scroll 
+  window.tocScrollFn && window.removeEventListener('scroll', window.tocScrollFn)
+  window.scrollCollect && window.removeEventListener('scroll', scrollCollect)
+
+  typeof preloader === 'object' && preloader.initLoading()
+  document.getElementById('rightside').style.cssText = "opacity: ''; transform: ''"
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --> <script data-pjax>if(document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    var parent = document.getElementById('recent-posts');
+    var child = '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet"><div class="magnet_item"><a class="magnet_link" href="https://www.cclmsy.cc/categories/课程笔记/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍟 CCの课程笔记 (7)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.cclmsy.cc/categories/论文笔记/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍟 CCの论文笔记 (5)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.cclmsy.cc/categories/DL笔记/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍨 CCのDL笔记 (10)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.cclmsy.cc/categories/竞赛笔记/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍡 CCの竞赛笔记 (48)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.cclmsy.cc/categories/算法模板/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍼 CCの算法模板 (20)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><div class="magnet_item"><a class="magnet_link" href="https://www.cclmsy.cc/categories/项目文档/"><div class="magnet_link_context" style=""><span style="font-weight:500;flex:1">🍉 CCの项目文档 (1)</span><span style="padding:0px 4px;border-radius: 8px;"><i class="fas fa-arrow-circle-right"></i></span></div></a></div><a class="magnet_link_more"  href="https://www.cclmsy.cc/categories/" style="flex:1;text-align: center;margin-bottom: 10px;">查看更多...</a></div></div>';
+    console.log('已挂载magnet')
+    parent.insertAdjacentHTML("afterbegin",child)}
+     </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(33.333333333333336% - 5px);background: #e9e9e9;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: var(--text-bg-hover)}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
+    <style></style><script data-pjax>
+  function butterfly_swiper_injector_config(){
+    var parent_div_git = document.getElementById('recent-posts');
+    var item_html = '<div class="recent-post-item" style="height: auto;width: 100%"><div class="blog-slider swiper-container-fade swiper-container-horizontal" id="swiper_container"><div class="blog-slider__wrp swiper-wrapper" style="transition-duration: 0ms;"></div><div class="blog-slider__pagination swiper-pagination-clickable swiper-pagination-bullets"></div></div></div>';
+    console.log('已挂载butterfly_swiper')
+    parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  var elist = 'undefined'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var flag = 0;
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_swiper_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_swiper_injector_config();
+  }
+  </script><script defer src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js"></script><script defer data-pjax src="https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js"></script><div class="js-pjax"><script async="async">var arr = document.getElementsByClassName('recent-post-item');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script><script async="async">var arr = document.getElementsByClassName('card-widget');
+for(var i = 0;i<arr.length;i++){
+    arr[i].classList.add('wow');
+    arr[i].classList.add('animate__zoomIn');
+    arr[i].setAttribute('data-wow-duration', '2s');
+    arr[i].setAttribute('data-wow-delay', '200ms');
+    arr[i].setAttribute('data-wow-offset', '30');
+    arr[i].setAttribute('data-wow-iteration', '1');
+  }</script></div><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js"></script><script defer src="https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js"></script><script data-pjax src="https://npm.elemecdn.com/hexo-filter-gitcalendar/lib/gitcalendar.js"></script><script data-pjax>
+  function gitcalendar_injector_config(){
+      var parent_div_git = document.getElementById('gitZone');
+      var item_html = '<div class="recent-post-item" id="gitcalendarBar" style="width:100%;height:auto;padding:10px;"><style>#git_container{min-height: 320px}@media screen and (max-width:650px) {#git_container{min-height: 0px}}</style><div id="git_loading" style="width:10%;height:100%;margin:0 auto;display: block;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50" xml:space="preserve"><path fill="#d0d0d0" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z" transform="rotate(275.098 25 25)"><animatetransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animatetransform></path></svg><style>#git_container{display: none;}</style></div><div id="git_container"></div></div>';
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      console.log('已挂载gitcalendar')
+      }
+
+    if( document.getElementById('gitZone') && (location.pathname ==='/site/census/'|| '/site/census/' ==='all')){
+        gitcalendar_injector_config()
+        GitCalendarInit("https://gitcalendar.cclmsy.cc/api?CCLMSY",['#d9e0df', '#c6e0dc', '#a8dcd4', '#9adcd2', '#89ded1', '#77e0d0', '#5fdecb', '#47dcc6', '#39dcc3', '#1fdabe', '#00dab9'],'CCLMSY')
+    }
+  </script><!-- hexo injector body_end end --></body></html>
