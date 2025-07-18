@@ -3381,8 +3381,10 @@ function createWinbox() {
 <div class="note warning modern"><p>字体资源需要一点时间加载，短时间内未加载成功请稍作等待。非商免字体未经授权只能个人使用。本站为完全非商业、非盈利性质的网站，平时用于个人学习交流，如有侵权请联系站长删除，谢谢！ —— 致版权方</p>
 </div>
 <p id="swfs">
+<!--
 <a class="swf" id="swf_Kaixinhua" href="javascript:;" rel="noopener external nofollow" style="font-family:'Kai_xinhua'!important;color:black" onclick="setFont('Kai_xinhua')">新华楷体</a>
 <a class="swf" id="swf_Fangyuanali" href="javascript:;" rel="noopener external nofollow" style="font-family:'Fangyuan_ali'!important;color:black" onclick="setFont('Fangyuan_ali')">阿里方圆体</a>
+-->
 <a class="swf" id="swf_miaozisheying" href="javascript:;" rel="noopener external nofollow" style="font-family:'miaozisheying'!important;color:black" onclick="setFont('miaozisheying')">喵字摄影体</a>
 <a class="swf" id="swf_default" href="javascript:;" rel="noopener external nofollow" style="font-family:-apple-system, IBM Plex Mono ,monosapce,'微软雅黑', sans-serif;!important;color:black" onclick="setFont('default')">系统默认</a>
 </p>
