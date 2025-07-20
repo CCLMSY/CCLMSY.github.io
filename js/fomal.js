@@ -3177,10 +3177,10 @@ if (localStorage.getItem("blogbg") != undefined) {
   setBg(localStorage.getItem("blogbg"));
 } else {
   document.getElementById("defineBg").innerText = `:root{
-    --default-bg: url(/assets/images/background/background_light.jpg);
-    --darkmode-bg:url(/assets/images/background/background_dark.jpg);
-    --mobileday-bg: url(/assets/images/background/background_mobile_light.webp);
-    --mobilenight-bg: url(/assets/images/background/background_mobile_dark.webp);
+    --default-bg: url(/assets/background/background_light.jpg);
+    --darkmode-bg:url(/assets/background/background_dark.jpg);
+    --mobileday-bg: url(/assets/background/background_mobile_light.webp);
+    --mobilenight-bg: url(/assets/background/background_mobile_dark.webp);
   }`;
 }
 // 切换背景主函数
