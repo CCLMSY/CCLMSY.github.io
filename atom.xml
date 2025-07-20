@@ -102,11 +102,11 @@
     <category term="论文笔记" scheme="https://www.cclmsy.cc/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
+    <category term="CV" scheme="https://www.cclmsy.cc/tags/CV/"/>
+    
     <category term="论文笔记" scheme="https://www.cclmsy.cc/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     <category term="MLLLM" scheme="https://www.cclmsy.cc/tags/MLLLM/"/>
-    
-    <category term="CV" scheme="https://www.cclmsy.cc/tags/CV/"/>
     
   </entry>
   
@@ -127,9 +127,9 @@
     <category term="论文笔记" scheme="https://www.cclmsy.cc/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="论文实现" scheme="https://www.cclmsy.cc/tags/%E8%AE%BA%E6%96%87%E5%AE%9E%E7%8E%B0/"/>
-    
     <category term="图像检索" scheme="https://www.cclmsy.cc/tags/%E5%9B%BE%E5%83%8F%E6%A3%80%E7%B4%A2/"/>
+    
+    <category term="论文实现" scheme="https://www.cclmsy.cc/tags/%E8%AE%BA%E6%96%87%E5%AE%9E%E7%8E%B0/"/>
     
     <category term="MLLM" scheme="https://www.cclmsy.cc/tags/MLLM/"/>
     
@@ -219,9 +219,9 @@
     <category term="论文笔记" scheme="https://www.cclmsy.cc/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="论文实现" scheme="https://www.cclmsy.cc/tags/%E8%AE%BA%E6%96%87%E5%AE%9E%E7%8E%B0/"/>
-    
     <category term="图像检索" scheme="https://www.cclmsy.cc/tags/%E5%9B%BE%E5%83%8F%E6%A3%80%E7%B4%A2/"/>
+    
+    <category term="论文实现" scheme="https://www.cclmsy.cc/tags/%E8%AE%BA%E6%96%87%E5%AE%9E%E7%8E%B0/"/>
     
     <category term="MLLM" scheme="https://www.cclmsy.cc/tags/MLLM/"/>
     
@@ -374,9 +374,9 @@
     <category term="DL笔记" scheme="https://www.cclmsy.cc/categories/DL%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="深度学习" scheme="https://www.cclmsy.cc/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
     <category term="神经网络" scheme="https://www.cclmsy.cc/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="深度学习" scheme="https://www.cclmsy.cc/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
