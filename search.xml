@@ -101,11 +101,11 @@
       
         <tags>
             
-            <tag> CV </tag>
-            
             <tag> 论文笔记 </tag>
             
             <tag> MLLLM </tag>
+            
+            <tag> CV </tag>
             
         </tags>
       
@@ -130,9 +130,9 @@
       
         <tags>
             
-            <tag> 图像检索 </tag>
-            
             <tag> 论文实现 </tag>
+            
+            <tag> 图像检索 </tag>
             
             <tag> MLLM </tag>
             
@@ -238,9 +238,9 @@
       
         <tags>
             
-            <tag> 图像检索 </tag>
-            
             <tag> 论文实现 </tag>
+            
+            <tag> 图像检索 </tag>
             
             <tag> MLLM </tag>
             
@@ -477,9 +477,9 @@
             
             <tag> 算法模板 </tag>
             
-            <tag> 字符串 </tag>
-            
             <tag> 数据结构 </tag>
+            
+            <tag> 字符串 </tag>
             
         </tags>
       
@@ -1401,9 +1401,9 @@
             
             <tag> 算法模板 </tag>
             
-            <tag> 字符串 </tag>
-            
             <tag> 数据结构 </tag>
+            
+            <tag> 字符串 </tag>
             
         </tags>
       

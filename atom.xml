@@ -102,11 +102,11 @@
     <category term="论文笔记" scheme="https://www.cclmsy.cc/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="CV" scheme="https://www.cclmsy.cc/tags/CV/"/>
-    
     <category term="论文笔记" scheme="https://www.cclmsy.cc/tags/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     <category term="MLLLM" scheme="https://www.cclmsy.cc/tags/MLLLM/"/>
+    
+    <category term="CV" scheme="https://www.cclmsy.cc/tags/CV/"/>
     
   </entry>
   
@@ -127,9 +127,9 @@
     <category term="论文笔记" scheme="https://www.cclmsy.cc/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="图像检索" scheme="https://www.cclmsy.cc/tags/%E5%9B%BE%E5%83%8F%E6%A3%80%E7%B4%A2/"/>
-    
     <category term="论文实现" scheme="https://www.cclmsy.cc/tags/%E8%AE%BA%E6%96%87%E5%AE%9E%E7%8E%B0/"/>
+    
+    <category term="图像检索" scheme="https://www.cclmsy.cc/tags/%E5%9B%BE%E5%83%8F%E6%A3%80%E7%B4%A2/"/>
     
     <category term="MLLM" scheme="https://www.cclmsy.cc/tags/MLLM/"/>
     
@@ -219,9 +219,9 @@
     <category term="论文笔记" scheme="https://www.cclmsy.cc/categories/%E8%AE%BA%E6%96%87%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="图像检索" scheme="https://www.cclmsy.cc/tags/%E5%9B%BE%E5%83%8F%E6%A3%80%E7%B4%A2/"/>
-    
     <category term="论文实现" scheme="https://www.cclmsy.cc/tags/%E8%AE%BA%E6%96%87%E5%AE%9E%E7%8E%B0/"/>
+    
+    <category term="图像检索" scheme="https://www.cclmsy.cc/tags/%E5%9B%BE%E5%83%8F%E6%A3%80%E7%B4%A2/"/>
     
     <category term="MLLM" scheme="https://www.cclmsy.cc/tags/MLLM/"/>
     
@@ -422,9 +422,9 @@
     
     <category term="算法模板" scheme="https://www.cclmsy.cc/tags/%E7%AE%97%E6%B3%95%E6%A8%A1%E6%9D%BF/"/>
     
-    <category term="字符串" scheme="https://www.cclmsy.cc/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
     <category term="数据结构" scheme="https://www.cclmsy.cc/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="字符串" scheme="https://www.cclmsy.cc/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
     
   </entry>
   
