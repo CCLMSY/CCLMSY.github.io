@@ -7655,7 +7655,7 @@ input#pic-link {
 
 /* heo 加载动画头像 */
 .loading-img {
-  background: url(/assets/Avatars/Avatar.jpg)
+  background: url(/assets/avatars/avatar.jpg)
     no-repeat center center;
   background-size: cover;
 }
