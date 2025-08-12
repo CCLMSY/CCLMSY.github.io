@@ -6491,12 +6491,12 @@ blockquote.pullquote.right {
   font-family: Kai_xinhua;
   src: url(/fonts/Kai_xinhua.woff2);
   font-display: swap;
-}
-@font-face {
-  font-family: Fangyuan_ali;
-  src: url(/fonts/Fangyuan_ali.woff2);
-  font-display: swap;
 } */
+@font-face {
+  font-family: Consolas_1;
+  src: url(/fonts/Consolas.woff2);
+  font-display: swap;
+}
 @font-face {
   font-family: miaozisheying;
   src: url(/fonts/miaozisheying.woff2);
