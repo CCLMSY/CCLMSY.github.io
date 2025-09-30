@@ -1136,7 +1136,7 @@ function createtime1() {
     "小站已经苟活",
     dnum,
     "天啦!",
-    "©2023 By CCLMSY💫",
+    "©2025 By CCLMSY💫",
   ];
 
   setTimeout(
