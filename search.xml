@@ -62,7 +62,7 @@
       <link href="/posts/0.html"/>
       <url>/posts/0.html</url>
       
-        <content type="html"><![CDATA[<ul><li>$\mathbf{O}<em>{det}=LLM(\mathbf{T}</em>{ins}+\mathbf{T}<em>{tag}+\mathbf{T}</em>{img})$</li></ul>]]></content>
+        <content type="html"><![CDATA[<p>$\mathbf{O}<em>{det}=LLM(\mathbf{T}</em>{ins}+\mathbf{T}<em>{tag}+\mathbf{T}</em>{img})$</p>]]></content>
       
       
       
@@ -489,9 +489,9 @@
       
         <tags>
             
-            <tag> 深度学习 </tag>
-            
             <tag> 神经网络 </tag>
+            
+            <tag> 深度学习 </tag>
             
         </tags>
       

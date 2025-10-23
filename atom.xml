@@ -67,16 +67,14 @@
     <link href="https://www.cclmsy.cc/posts/0.html"/>
     <id>https://www.cclmsy.cc/posts/0.html</id>
     <published>2025-09-29T14:54:58.537Z</published>
-    <updated>2025-10-23T09:24:50.631Z</updated>
+    <updated>2025-10-23T09:25:44.016Z</updated>
     
-    <content type="html"><![CDATA[<ul><li>$\mathbf{O}<em>{det}=LLM(\mathbf{T}</em>{ins}+\mathbf{T}<em>{tag}+\mathbf{T}</em>{img})$</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>$\mathbf{O}<em>{det}=LLM(\mathbf{T}</em>{ins}+\mathbf{T}<em>{tag}+\mathbf{T}</em>{img})$</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;$&#92;mathbf{O}&lt;em&gt;{det}=LLM(&#92;mathbf{T}&lt;/em&gt;{ins}+&#92;mathbf{T}&lt;em&gt;{tag}+&#92;mathbf{T}&lt;/em&gt;{img})$&lt;/li&gt;
-&lt;/ul&gt;
+    <summary type="html">&lt;p&gt;$&#92;mathbf{O}&lt;em&gt;{det}=LLM(&#92;mathbf{T}&lt;/em&gt;{ins}+&#92;mathbf{T}&lt;em&gt;{tag}+&#92;mathbf{T}&lt;/em&gt;{img})$&lt;/p&gt;
 </summary>
       
     
@@ -448,9 +446,9 @@
     <category term="DL笔记" scheme="https://www.cclmsy.cc/categories/DL%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="深度学习" scheme="https://www.cclmsy.cc/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
-    
     <category term="神经网络" scheme="https://www.cclmsy.cc/tags/%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    
+    <category term="深度学习" scheme="https://www.cclmsy.cc/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
     
   </entry>
   
